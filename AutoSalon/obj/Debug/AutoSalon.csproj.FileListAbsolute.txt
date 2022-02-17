@@ -9,3 +9,4 @@ C:\Users\root\source\repos\AutoSalon\AutoSalon\obj\Debug\AutoSalon.csproj.CoreCo
 C:\Users\root\source\repos\AutoSalon\AutoSalon\obj\Debug\AutoSalon.exe
 C:\Users\root\source\repos\AutoSalon\AutoSalon\obj\Debug\AutoSalon.pdb
 C:\Users\root\source\repos\AutoSalon\AutoSalon\obj\Debug\AutoSalon.CarForm.resources
+C:\Users\root\source\repos\AutoSalon\AutoSalon\obj\Debug\AutoSalon.FiltrForm.resources
