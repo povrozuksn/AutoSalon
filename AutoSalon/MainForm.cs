@@ -29,10 +29,15 @@ namespace AutoSalon
             car.ShowDialog();
         }
 
-        private void FiltrButton_Click(object sender, EventArgs e)
+        private void button13_Click(object sender, EventArgs e)
         {
-            FiltrForm filtr = new FiltrForm();
+            filtrForm filtr = new filtrForm();
             filtr.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
