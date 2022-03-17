@@ -10,3 +10,15 @@ C:\Users\root\source\repos\AutoSalon\AutoSalon\obj\Debug\AutoSalon.exe
 C:\Users\root\source\repos\AutoSalon\AutoSalon\obj\Debug\AutoSalon.pdb
 C:\Users\root\source\repos\AutoSalon\AutoSalon\obj\Debug\AutoSalon.CarForm.resources
 C:\Users\root\source\repos\AutoSalon\AutoSalon\obj\Debug\AutoSalon.filtrForm.resources
+C:\Users\root\Downloads\AutoSalon\AutoSalon\bin\Debug\AutoSalon.exe.config
+C:\Users\root\Downloads\AutoSalon\AutoSalon\bin\Debug\AutoSalon.exe
+C:\Users\root\Downloads\AutoSalon\AutoSalon\bin\Debug\AutoSalon.pdb
+C:\Users\root\Downloads\AutoSalon\AutoSalon\obj\Debug\AutoSalon.csproj.AssemblyReference.cache
+C:\Users\root\Downloads\AutoSalon\AutoSalon\obj\Debug\AutoSalon.CarForm.resources
+C:\Users\root\Downloads\AutoSalon\AutoSalon\obj\Debug\AutoSalon.filtrForm.resources
+C:\Users\root\Downloads\AutoSalon\AutoSalon\obj\Debug\AutoSalon.MainForm.resources
+C:\Users\root\Downloads\AutoSalon\AutoSalon\obj\Debug\AutoSalon.Properties.Resources.resources
+C:\Users\root\Downloads\AutoSalon\AutoSalon\obj\Debug\AutoSalon.csproj.GenerateResource.cache
+C:\Users\root\Downloads\AutoSalon\AutoSalon\obj\Debug\AutoSalon.csproj.CoreCompileInputs.cache
+C:\Users\root\Downloads\AutoSalon\AutoSalon\obj\Debug\AutoSalon.exe
+C:\Users\root\Downloads\AutoSalon\AutoSalon\obj\Debug\AutoSalon.pdb

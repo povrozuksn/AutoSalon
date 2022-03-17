@@ -42,7 +42,7 @@ namespace AutoSalon
 
     public partial class filtrForm : Form
     {
-        Car[] car_list = new Car[12];
+        Car[] car_list = new Car[13];
 
         public filtrForm()
         {
@@ -60,6 +60,7 @@ namespace AutoSalon
             car_list[9] = new Car("Toyota Corolla", 1675000, "МКПП");
             car_list[10] = new Car("Toyota Camry", 2563000, "АКПП");
             car_list[11] = new Car("Toyota Supra", 5534000, "АКПП");
+            car_list[12] = new Car("Lada Xray", 1548000, "АКПП");
 
 
 
