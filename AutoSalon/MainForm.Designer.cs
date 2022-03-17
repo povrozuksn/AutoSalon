@@ -57,6 +57,7 @@ namespace AutoSalon
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.HelpButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
@@ -104,6 +105,7 @@ namespace AutoSalon
             this.tableLayoutPanel1.Controls.Add(this.pictureBox9, 2, 5);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox7, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox8, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.HelpButton, 0, 8);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(50, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 9;
@@ -126,9 +128,9 @@ namespace AutoSalon
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(3, 506);
+            this.pictureBox13.Location = new System.Drawing.Point(375, 506);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(366, 103);
+            this.pictureBox13.Size = new System.Drawing.Size(367, 103);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox13.TabIndex = 24;
             this.pictureBox13.TabStop = false;
@@ -139,9 +141,9 @@ namespace AutoSalon
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(375, 506);
+            this.pictureBox12.Location = new System.Drawing.Point(3, 506);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(367, 103);
+            this.pictureBox12.Size = new System.Drawing.Size(366, 103);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox12.TabIndex = 23;
             this.pictureBox12.TabStop = false;
@@ -469,6 +471,19 @@ namespace AutoSalon
             this.pictureBox11.TabIndex = 22;
             this.pictureBox11.TabStop = false;
             // 
+            // HelpButton
+            // 
+            this.HelpButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.HelpButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.HelpButton.Location = new System.Drawing.Point(3, 615);
+            this.HelpButton.Name = "HelpButton";
+            this.HelpButton.Size = new System.Drawing.Size(366, 44);
+            this.HelpButton.TabIndex = 26;
+            this.HelpButton.Text = "Помощь";
+            this.HelpButton.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -525,6 +540,7 @@ namespace AutoSalon
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button HelpButton;
     }
 }
 
