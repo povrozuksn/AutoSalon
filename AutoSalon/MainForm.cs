@@ -39,5 +39,16 @@ namespace AutoSalon
         {
 
         }
+
+        private void HelpButton_Click(object sender, EventArgs e)
+        {
+            HelpForm help = new HelpForm();
+            help.ShowDialog();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
