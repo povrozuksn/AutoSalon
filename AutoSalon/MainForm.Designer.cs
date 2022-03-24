@@ -58,6 +58,7 @@ namespace AutoSalon
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.HelpButton = new System.Windows.Forms.Button();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.button14 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
@@ -106,6 +107,8 @@ namespace AutoSalon
             this.tableLayoutPanel1.Controls.Add(this.pictureBox7, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox8, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.HelpButton, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.button14, 1, 8);
+            this.tableLayoutPanel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(50, 12);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 9;
@@ -485,6 +488,19 @@ namespace AutoSalon
             this.pictureBox11.TabIndex = 22;
             this.pictureBox11.TabStop = false;
             // 
+            // button14
+            // 
+            this.button14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button14.Location = new System.Drawing.Point(375, 615);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(367, 44);
+            this.button14.TabIndex = 27;
+            this.button14.Text = "Избранное";
+            this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -543,6 +559,7 @@ namespace AutoSalon
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button HelpButton;
+        private System.Windows.Forms.Button button14;
     }
 }
 

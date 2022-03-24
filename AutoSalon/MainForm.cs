@@ -24,9 +24,9 @@ namespace AutoSalon
 
         private void CarClick(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
+            /*Button btn = (Button)sender;
             CarForm car = new CarForm(btn.Text);
-            car.ShowDialog();
+            car.ShowDialog();*/
         }
 
         private void button13_Click(object sender, EventArgs e)
@@ -49,6 +49,12 @@ namespace AutoSalon
         private void MainForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            SelectForm select = new SelectForm();
+            select.ShowDialog();
         }
     }
 }

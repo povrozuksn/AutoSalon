@@ -42,7 +42,7 @@ namespace AutoSalon
 
     public partial class filtrForm : Form
     {
-        Car[] car_list = new Car[13];
+        Car[] car_list = new Car[13];        
 
         public filtrForm()
         {
@@ -88,9 +88,15 @@ namespace AutoSalon
 
         private void CarClick(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
-            CarForm car = new CarForm(btn.Text);
-            car.ShowDialog();
+            for (int i = 0; i < car_list.Length; i++)
+            {
+                if(((Button)sender).Text == car_list[i].btn.Text)
+                {
+                    CarForm car = new CarForm(car_list[i]);
+                    car.ShowDialog();
+                }
+            }
+                
         }
 
         private void filtrForm_Load(object sender, EventArgs e)

@@ -46,3 +46,16 @@ C:\Users\root\Downloads\1\AutoSalon\AutoSalon\obj\Debug\AutoSalon.csproj.Generat
 C:\Users\root\Downloads\1\AutoSalon\AutoSalon\obj\Debug\AutoSalon.csproj.CoreCompileInputs.cache
 C:\Users\root\Downloads\1\AutoSalon\AutoSalon\obj\Debug\AutoSalon.exe
 C:\Users\root\Downloads\1\AutoSalon\AutoSalon\obj\Debug\AutoSalon.pdb
+C:\Users\root\Downloads\1\AutoSalon\bin\Debug\AutoSalon.exe.config
+C:\Users\root\Downloads\1\AutoSalon\bin\Debug\AutoSalon.exe
+C:\Users\root\Downloads\1\AutoSalon\bin\Debug\AutoSalon.pdb
+C:\Users\root\Downloads\1\AutoSalon\obj\Debug\AutoSalon.csproj.AssemblyReference.cache
+C:\Users\root\Downloads\1\AutoSalon\obj\Debug\AutoSalon.CarForm.resources
+C:\Users\root\Downloads\1\AutoSalon\obj\Debug\AutoSalon.filtrForm.resources
+C:\Users\root\Downloads\1\AutoSalon\obj\Debug\AutoSalon.MainForm.resources
+C:\Users\root\Downloads\1\AutoSalon\obj\Debug\AutoSalon.Properties.Resources.resources
+C:\Users\root\Downloads\1\AutoSalon\obj\Debug\AutoSalon.csproj.GenerateResource.cache
+C:\Users\root\Downloads\1\AutoSalon\obj\Debug\AutoSalon.csproj.CoreCompileInputs.cache
+C:\Users\root\Downloads\1\AutoSalon\obj\Debug\AutoSalon.exe
+C:\Users\root\Downloads\1\AutoSalon\obj\Debug\AutoSalon.pdb
+C:\Users\root\Downloads\1\AutoSalon\obj\Debug\AutoSalon.SelectForm.resources
