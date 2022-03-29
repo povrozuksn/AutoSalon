@@ -42,7 +42,7 @@ namespace AutoSalon
 
     public partial class filtrForm : Form
     {
-        Car[] car_list = new Car[13];        
+        public static Car[] car_list = new Car[13];
 
         public filtrForm()
         {
@@ -86,17 +86,16 @@ namespace AutoSalon
             }
         }
 
-        private void CarClick(object sender, EventArgs e)
+        public static void CarClick(object sender, EventArgs e)
         {
             for (int i = 0; i < car_list.Length; i++)
-            {
-                if(((Button)sender).Text == car_list[i].btn.Text)
-                {
+            { 
+               if(((Button)sender).Text == car_list[i].btn.Text)
+               {
                     CarForm car = new CarForm(car_list[i]);
                     car.ShowDialog();
-                }
-            }
-                
+               }                
+            }                          
         }
 
         private void filtrForm_Load(object sender, EventArgs e)
@@ -142,6 +141,12 @@ namespace AutoSalon
                 
 
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SelectForm select = new SelectForm();
+            select.ShowDialog();
         }
     }
 }

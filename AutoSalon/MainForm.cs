@@ -24,9 +24,7 @@ namespace AutoSalon
 
         private void CarClick(object sender, EventArgs e)
         {
-            /*Button btn = (Button)sender;
-            CarForm car = new CarForm(btn.Text);
-            car.ShowDialog();*/
+            filtrForm.CarClick(sender, e);
         }
 
         private void button13_Click(object sender, EventArgs e)
