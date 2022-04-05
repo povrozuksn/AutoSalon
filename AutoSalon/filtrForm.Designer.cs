@@ -35,6 +35,7 @@ namespace AutoSalon
             this.label2 = new System.Windows.Forms.Label();
             this.priceTextBox = new System.Windows.Forms.TextBox();
             this.filtrPanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // filtrButton
@@ -97,12 +98,24 @@ namespace AutoSalon
             this.filtrPanel.Size = new System.Drawing.Size(1028, 446);
             this.filtrPanel.TabIndex = 37;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(743, 56);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(218, 47);
+            this.button1.TabIndex = 38;
+            this.button1.Text = "Избранное";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // filtrForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1052, 555);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.filtrPanel);
             this.Controls.Add(this.priceTextBox);
             this.Controls.Add(this.label2);
@@ -124,5 +137,6 @@ namespace AutoSalon
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox priceTextBox;
         private System.Windows.Forms.Panel filtrPanel;
+        private System.Windows.Forms.Button button1;
     }
 }

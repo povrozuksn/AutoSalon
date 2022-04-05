@@ -15,14 +15,16 @@ namespace AutoSalon
         public string name;
         public int price;
         public string kpp;
+        public int power;
         public Button btn;
         public PictureBox picture;
 
-        public Car(string _name, int _price, string _kpp)
+        public Car(string _name, int _price, string _kpp, int _power)
         {
             name = _name;
             price = _price;
             kpp = _kpp;
+            power = _power;
             btn = new Button();
             picture = new PictureBox();
 
@@ -48,19 +50,7 @@ namespace AutoSalon
         {
            InitializeComponent();
 
-            car_list[0] = new Car("Lada Priora", 446000, "МКПП");
-            car_list[1] = new Car("Lada Granta", 627800, "МКПП");
-            car_list[2] = new Car("Lada Vesta", 1035900, "МКПП");
-            car_list[3] = new Car("KIA Sorento", 2659900, "АКПП");
-            car_list[4] = new Car("KIA Soul", 1319900, "МКПП");
-            car_list[5] = new Car("KIA Sportage", 2319900, "АКПП");
-            car_list[6] = new Car("Nissan Note", 499000, "МКПП");
-            car_list[7] = new Car("Nissan Qashqai", 1597000, "МКПП");
-            car_list[8] = new Car("Nissan Xtrail", 2325000, "МКПП");
-            car_list[9] = new Car("Toyota Corolla", 1675000, "МКПП");
-            car_list[10] = new Car("Toyota Camry", 2563000, "АКПП");
-            car_list[11] = new Car("Toyota Supra", 5534000, "АКПП");
-            car_list[12] = new Car("Lada Xray", 1548000, "АКПП");
+            
 
 
 
