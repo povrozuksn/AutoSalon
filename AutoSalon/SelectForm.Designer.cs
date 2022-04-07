@@ -36,7 +36,7 @@ namespace AutoSalon
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(928, 695);
+            this.ClientSize = new System.Drawing.Size(1208, 695);
             this.Name = "SelectForm";
             this.Text = "SelectForm";
             this.Load += new System.EventHandler(this.SelectForm_Load);
