@@ -39,7 +39,12 @@ namespace AutoSalon
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SelectForm.selectCars.Add(car);
+            if(SelectForm.selectCars.ContainsKey(car))
+            {
+                SelectForm.selectCars[car]++;
+            }
+            else
+            SelectForm.selectCars.Add(car, 1);
         }
 
         private void label1_Click(object sender, EventArgs e)

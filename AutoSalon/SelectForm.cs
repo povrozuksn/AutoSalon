@@ -12,7 +12,9 @@ namespace AutoSalon
 {
     public partial class SelectForm : Form
     {
-        public static List<Car> selectCars = new List<Car>();
+        //public static List<Car> selectCars = new List<Car>();
+
+        public static Dictionary<Car,int> selectCars = new Dictionary<Car, int>();
 
         public SelectForm()
         {
@@ -26,8 +28,11 @@ namespace AutoSalon
             Controls.Clear();
             int x = 20;
             int y = 10;
-            foreach (Car car in selectCars)
+            foreach (KeyValuePair<Car,int> Select_Cars in selectCars)
             {
+                Car car = Select_Cars.Key;
+                
+
                 #region 1 столбец
                 PictureBox picture = new PictureBox();
                 picture.Location = new Point(x, y);
@@ -88,18 +93,19 @@ namespace AutoSalon
 
         void Del(object sender, EventArgs e)
         {
-            
+            int i = 0;
             Button b = new Button();
             b = (Button)sender;
-            List<Car> selectCars1 = new List<Car>();
-            foreach (Car car in selectCars)
+            Dictionary<Car, int> selectCars1 = new Dictionary<Car, int>();
+            foreach (KeyValuePair<Car,int> Select_Cars in selectCars)
             {
-                if(b.Location == new Point(720, 60))
+                if(b.Location == new Point(720, 190*i+60))
                 { }
                 else
                 {
-                    selectCars1.Add(car);
+                    selectCars1[Select_Cars.Key] = Select_Cars.Value;
                 }
+                i++;
             }
             selectCars = selectCars1;
             Draw();
