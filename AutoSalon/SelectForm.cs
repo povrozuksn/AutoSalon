@@ -11,8 +11,7 @@ using System.Windows.Forms;
 namespace AutoSalon
 {
     public partial class SelectForm : Form
-    {
-        //public static List<Car> selectCars = new List<Car>();
+    {     
 
         public static Dictionary<Car,int> selectCars = new Dictionary<Car, int>();
 
@@ -72,6 +71,22 @@ namespace AutoSalon
                 label4.Location = new Point(x + 500, y+50);
                 label4.Size = new Size(200, 40);
                 Controls.Add(label4);
+
+                Label label5 = new Label();
+                label5.Font = new Font("Microsoft Sans Serif", 12);
+                label5.Text = "Кол. - " + Select_Cars.Value.ToString() + " шт.";
+                label5.Location = new Point(x + 500, y + 100);
+                label5.Size = new Size(200, 40);
+                Controls.Add(label5);
+
+
+                Label label6 = new Label();
+                label6.Font = new Font("Microsoft Sans Serif", 12);
+                label6.Text = "ИТОГО - " + (car.price * Select_Cars.Value).ToString() + " руб.";
+                label6.Location = new Point(x + 500, y + 150);
+                label6.Size = new Size(200, 40);
+                Controls.Add(label6);
+
                 #endregion
 
                 #region 4 столбец
