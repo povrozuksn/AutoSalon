@@ -67,23 +67,31 @@ namespace AutoSalon
                 #region 3 столбец
                 Label label4 = new Label();
                 label4.Font = new Font("Microsoft Sans Serif", 12);
-                label4.Text = "ЦЕНА - " + car.price.ToString() + " руб.";
-                label4.Location = new Point(x + 500, y+50);
-                label4.Size = new Size(200, 40);
+                label4.Text = "ЦЕНА(руб.) - " + car.price.ToString();
+                label4.Location = new Point(x + 500, y);
+                label4.Size = new Size(200, 30);
                 Controls.Add(label4);
+
+                NumericUpDown numericUpDown1 = new NumericUpDown();
+                numericUpDown1.Font = new Font("Microsoft Sans Serif", 16);
+                numericUpDown1.Location = new Point(x + 500, y + 30);
+                numericUpDown1.Size = new Size(100, 40);
+                numericUpDown1.Value = Select_Cars.Value;
+                numericUpDown1.Click += new EventHandler(CountChanged);
+                Controls.Add(numericUpDown1);
 
                 Label label5 = new Label();
                 label5.Font = new Font("Microsoft Sans Serif", 12);
-                label5.Text = "Кол. - " + Select_Cars.Value.ToString() + " шт.";
-                label5.Location = new Point(x + 500, y + 100);
-                label5.Size = new Size(200, 40);
+                label5.Text = "Кол.(шт.) - " + Select_Cars.Value.ToString() + " шт.";
+                label5.Location = new Point(x + 500, y + 70);
+                label5.Size = new Size(200, 30);
                 Controls.Add(label5);
 
 
                 Label label6 = new Label();
                 label6.Font = new Font("Microsoft Sans Serif", 12);
-                label6.Text = "ИТОГО - " + (car.price * Select_Cars.Value).ToString() + " руб.";
-                label6.Location = new Point(x + 500, y + 150);
+                label6.Text = "ИТОГО(руб.) - " + (car.price * Select_Cars.Value).ToString();
+                label6.Location = new Point(x + 500, y + 100);
                 label6.Size = new Size(200, 40);
                 Controls.Add(label6);
 
@@ -126,9 +134,38 @@ namespace AutoSalon
             Draw();
         }
 
+        private void CountChanged(object sender, EventArgs e)
+        {
+            NumericUpDown nud = (NumericUpDown)sender;            
+            for(int i = 0; i < selectCars.Count; i++)
+            {
+                int price = 0;
+                if(nud.Location ==new Point(520, 190*i + 40))
+                {                
+                    foreach(Control ctrl in Controls)
+                    {
+                        if(ctrl is Label && ctrl.Location == new Point(520, 190 * i + 10))
+                        {
+                            price = Convert.ToInt32(ctrl.Text.Replace("ЦЕНА(руб.) - ", ""));   
+                        }
+                    }
+                    foreach (Control ctrl in Controls)
+                    {
+                        if (ctrl is Label && ctrl.Location == new Point(520, 190 * i + 110))
+                        {
+                            ctrl.Text = "ИТОГО(руб.) - " + (price * nud.Value).ToString();
+                        }
+                    }
+                }
+            }
+
+        }
+
         private void SelectForm_Load(object sender, EventArgs e)
         {
 
         }
+
+        
     }
 }
