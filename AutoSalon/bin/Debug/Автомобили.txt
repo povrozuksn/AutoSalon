@@ -1,14 +1,16 @@
-Lada Priora, 446000, МКПП, 98
-Lada Granta, 627800, МКПП, 87
-Lada Vesta, 1035900, МКПП, 106
-KIA Sorento, 2659900, АКПП, 180
-KIA Soul, 1319900, МКПП, 123
-KIA Sportage, 2319900, АКПП, 184
-Nissan Note, 499000, МКПП, 88
-Nissan Qashqai, 1597000, МКПП, 115
-Nissan Xtrail, 2325000, МКПП, 130
-Toyota Corolla, 1675000, МКПП, 122
-Toyota Camry, 2563000, АКПП, 200
-Toyota Supra, 5534000, АКПП, 340
-Lada Xray, 1548000, АКПП, 106
-Lada Priora, 446000, МКПП, 98
+Lada Priora, 446000, МКПП, 98, https://ru.wikipedia.org/wiki/LADA_Priora
+Lada Granta, 627800, МКПП, 87, https://ru.wikipedia.org/wiki/LADA_Granta
+Lada Vesta, 1035900, МКПП, 106, https://ru.wikipedia.org/wiki/LADA_Vesta
+KIA Sorento, 2659900, АКПП, 180, 
+KIA Soul, 1319900, МКПП, 123, 
+KIA Sportage, 2319900, АКПП, 184, 
+Nissan Note, 499000, МКПП, 88, 
+Nissan Qashqai, 1597000, МКПП, 115, 
+Nissan Xtrail, 2325000, МКПП, 130, 
+Toyota Corolla, 1675000, МКПП, 122, 
+Toyota Camry, 2563000, АКПП, 200, 
+Toyota Supra, 5534000, АКПП, 340, 
+Lada Xray, 1548000, АКПП, 106, 
+Lada Kalina, 250000, МКПП, 125, 
+LADA Largus, 222000, МКПП, 130, 
+LADA Niva Travel, 500000, АКПП, 250, 

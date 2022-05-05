@@ -16,15 +16,17 @@ namespace AutoSalon
         public int price;
         public string kpp;
         public int power;
+        public string web;
         public Button btn;
         public PictureBox picture;
 
-        public Car(string _name, int _price, string _kpp, int _power)
+        public Car(string _name, int _price, string _kpp, int _power, string _web)
         {
             name = _name;
             price = _price;
             kpp = _kpp;
             power = _power;
+            web = _web;
             btn = new Button();
             picture = new PictureBox();
 

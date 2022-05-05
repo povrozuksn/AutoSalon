@@ -59,3 +59,4 @@ C:\Users\root\Downloads\1\AutoSalon\obj\Debug\AutoSalon.csproj.CoreCompileInputs
 C:\Users\root\Downloads\1\AutoSalon\obj\Debug\AutoSalon.exe
 C:\Users\root\Downloads\1\AutoSalon\obj\Debug\AutoSalon.pdb
 C:\Users\root\Downloads\1\AutoSalon\obj\Debug\AutoSalon.SelectForm.resources
+C:\Users\root\Downloads\1\AutoSalon\obj\Debug\AutoSalon.AddCarForm.resources

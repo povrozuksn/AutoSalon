@@ -40,18 +40,22 @@ namespace AutoSalon
 
         private void HelpButton_Click(object sender, EventArgs e)
         {
-            HelpForm help = new HelpForm();
-            help.ShowDialog();
+            /*HelpForm help = new HelpForm();
+            help.ShowDialog();*/
+            AddCarForm add = new AddCarForm();
+            add.ShowDialog();
+            MainForm_Load(sender, e);
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            filtrForm.car_list.Clear();
             string[] lines = System.IO.File.ReadAllLines("Автомобили.txt");
 
             foreach(string str in lines)
             {
                 string[] parts = str.Split(new string[] {", "}, StringSplitOptions.None);
-                Car car = new Car(parts[0], Convert.ToInt32(parts[1]), parts[2], Convert.ToInt32(parts[3]));
+                Car car = new Car(parts[0], Convert.ToInt32(parts[1]), parts[2], Convert.ToInt32(parts[3]), parts[4]);
                 filtrForm.car_list.Add(car);
             }
         }
@@ -60,6 +64,12 @@ namespace AutoSalon
         {
             SelectForm select = new SelectForm();
             select.ShowDialog();
+        }
+
+        private void AddToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddCarForm add = new AddCarForm();
+            add.ShowDialog();
         }
     }
 }
