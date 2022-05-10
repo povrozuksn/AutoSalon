@@ -41,15 +41,17 @@ namespace AutoSalon
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.Location = new System.Drawing.Point(0, 278);
+            this.button1.Location = new System.Drawing.Point(0, 522);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(649, 47);
+            this.button1.Size = new System.Drawing.Size(569, 47);
             this.button1.TabIndex = 0;
             this.button1.Text = "Сохранить";
             this.button1.UseVisualStyleBackColor = true;
@@ -127,7 +129,7 @@ namespace AutoSalon
             // 
             this.button2.Location = new System.Drawing.Point(329, 27);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(281, 32);
+            this.button2.Size = new System.Drawing.Size(210, 32);
             this.button2.TabIndex = 9;
             this.button2.Text = "Картинка";
             this.button2.UseVisualStyleBackColor = true;
@@ -137,7 +139,7 @@ namespace AutoSalon
             // 
             this.pictureBox1.Location = new System.Drawing.Point(331, 72);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(279, 182);
+            this.pictureBox1.Size = new System.Drawing.Size(208, 166);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -146,11 +148,33 @@ namespace AutoSalon
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.Location = new System.Drawing.Point(23, 268);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(515, 241);
+            this.textBox1.TabIndex = 11;
+            this.textBox1.Text = "Введите описание машины";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(22, 248);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 17);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Описание";
+            // 
             // AddCarForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(649, 325);
+            this.ClientSize = new System.Drawing.Size(569, 569);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.kppCB);
@@ -164,6 +188,7 @@ namespace AutoSalon
             this.Controls.Add(this.button1);
             this.Name = "AddCarForm";
             this.Text = "AddCarForm";
+            this.Load += new System.EventHandler(this.AddCarForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -184,5 +209,7 @@ namespace AutoSalon
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label5;
     }
 }

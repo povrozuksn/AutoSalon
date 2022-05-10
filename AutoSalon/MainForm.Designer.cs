@@ -479,7 +479,7 @@ namespace AutoSalon
             this.HelpButton.Name = "HelpButton";
             this.HelpButton.Size = new System.Drawing.Size(366, 44);
             this.HelpButton.TabIndex = 26;
-            this.HelpButton.Text = "Добавить";
+            this.HelpButton.Text = "Справка";
             this.HelpButton.UseVisualStyleBackColor = true;
             this.HelpButton.Click += new System.EventHandler(this.HelpButton_Click);
             // 
@@ -523,7 +523,7 @@ namespace AutoSalon
             // AddToolStripMenuItem
             // 
             this.AddToolStripMenuItem.Name = "AddToolStripMenuItem";
-            this.AddToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.AddToolStripMenuItem.Size = new System.Drawing.Size(205, 24);
             this.AddToolStripMenuItem.Text = "Добавить машину";
             this.AddToolStripMenuItem.Click += new System.EventHandler(this.AddToolStripMenuItem_Click);
             // 
@@ -533,11 +533,11 @@ namespace AutoSalon
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1190, 697);
+            this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.ContextMenuStripChanged += new System.EventHandler(this.AddToolStripMenuItem_Click);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();

@@ -93,6 +93,9 @@
     <EmbeddedResource Include="filtrForm.resx">
       <DependentUpon>filtrForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HelpForm.resx">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

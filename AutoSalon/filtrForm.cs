@@ -16,15 +16,17 @@ namespace AutoSalon
         public int price;
         public string kpp;
         public int power;
+        public string web;
         public Button btn;
         public PictureBox picture;
 
-        public Car(string _name, int _price, string _kpp, int _power)
+        public Car(string _name, int _price, string _kpp, int _power, string _web)
         {
             name = _name;
             price = _price;
             kpp = _kpp;
             power = _power;
+            web = _web;
             btn = new Button();
             picture = new PictureBox();
 
@@ -44,19 +46,15 @@ namespace AutoSalon
 
     public partial class filtrForm : Form
     {
-        public static Car[] car_list = new Car[13];
+        public static List<Car> car_list = new List<Car>();
 
         public filtrForm()
         {
            InitializeComponent();
 
-            
-
-
-
             int x = 10;
             int y = 10;
-            for (int i = 0; i < car_list.Length; i++)
+            for (int i = 0; i < car_list.Count; i++)
             {
                 car_list[i].btn.Location = new Point(x, y);
                 car_list[i].btn.Size = new Size(140, 40);
@@ -78,7 +76,7 @@ namespace AutoSalon
 
         public static void CarClick(object sender, EventArgs e)
         {
-            for (int i = 0; i < car_list.Length; i++)
+            for (int i = 0; i < car_list.Count; i++)
             { 
                if(((Button)sender).Text == car_list[i].btn.Text)
                {
@@ -97,7 +95,7 @@ namespace AutoSalon
         {
             int x = 10;
             int y = 10;
-            for (int i = 0; i < car_list.Length; i++)
+            for (int i = 0; i < car_list.Count; i++)
             {
                 car_list[i].btn.Visible = true;
                 car_list[i].picture.Visible = true;

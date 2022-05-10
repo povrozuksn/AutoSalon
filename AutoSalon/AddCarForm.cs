@@ -24,10 +24,13 @@ namespace AutoSalon
                 nameTB.Text + ", " +
                 priceTB.Text + ", " +
                 kppCB.Text + ", " +
-                powerTB.Text);
+                powerTB.Text + ", ");
 
             if(fileName !="")
             System.IO.File.Copy(fileName, "../../Pictures/" + nameTB.Text + ".jpg");
+
+            System.IO.File.AppendAllText("../../Pictures/" + nameTB.Text + ".txt", 
+                Environment.NewLine + textBox1.Text );
 
             MessageBox.Show("Сохранено");
         }
@@ -40,6 +43,16 @@ namespace AutoSalon
                 fileName = openFileDialog1.FileName;
                 pictureBox1.Load(fileName);
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddCarForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

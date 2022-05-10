@@ -11,9 +11,18 @@ using System.Windows.Forms;
 namespace AutoSalon
 {
     public partial class SelectForm : Form
-    {     
-
+    {
+        public static int totalPrice = 0;
         public static Dictionary<Car,int> selectCars = new Dictionary<Car, int>();
+
+        public static void Calculate()
+        {
+            totalPrice = 0;
+            foreach (KeyValuePair<Car, int> select_Cars in selectCars)
+            {
+                totalPrice += select_Cars.Value * select_Cars.Key.price;
+            }
+        }
 
         public SelectForm()
         {
@@ -25,6 +34,8 @@ namespace AutoSalon
         void Draw()
         {
             Controls.Clear();
+            Controls.Add(label1);
+
             int x = 20;
             int y = 10;
             foreach (KeyValuePair<Car,int> Select_Cars in selectCars)
@@ -78,16 +89,7 @@ namespace AutoSalon
                 numericUpDown1.Size = new Size(100, 40);
                 numericUpDown1.Value = Select_Cars.Value;
                 numericUpDown1.Click += new EventHandler(CountChanged);
-                Controls.Add(numericUpDown1);
-
-                /*
-                Label label5 = new Label();
-                label5.Font = new Font("Microsoft Sans Serif", 12);
-                label5.Text = "Кол.(шт.) - " + Select_Cars.Value.ToString() + " шт.";
-                label5.Location = new Point(x + 500, y + 70);
-                label5.Size = new Size(200, 30);
-                Controls.Add(label5);
-                */
+                Controls.Add(numericUpDown1);                
 
                 Label label6 = new Label();
                 label6.Font = new Font("Microsoft Sans Serif", 12);
@@ -112,7 +114,8 @@ namespace AutoSalon
                 
             }
 
-
+            Calculate();
+            label1.Text = "ОБЩАЯ СТОИМОСТЬ КОРЗИНЫ (РУБ.)  -  " + totalPrice.ToString();
         }
 
         void Del(object sender, EventArgs e)
@@ -175,6 +178,9 @@ namespace AutoSalon
                 }
             }
 
+            Calculate();
+            label1.Text = "ОБЩАЯ СТОИМОСТЬ КОРЗИНЫ (РУБ.)  -  " + totalPrice.ToString();
+
         }
 
         private void SelectForm_Load(object sender, EventArgs e)
@@ -182,6 +188,9 @@ namespace AutoSalon
 
         }
 
-        
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
