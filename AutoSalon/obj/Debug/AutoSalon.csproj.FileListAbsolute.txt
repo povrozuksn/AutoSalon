@@ -61,3 +61,4 @@ C:\Users\root\Downloads\1\AutoSalon\obj\Debug\AutoSalon.pdb
 C:\Users\root\Downloads\1\AutoSalon\obj\Debug\AutoSalon.SelectForm.resources
 C:\Users\root\Downloads\1\AutoSalon\obj\Debug\AutoSalon.AddCarForm.resources
 C:\Users\root\Downloads\1\AutoSalon\obj\Debug\AutoSalon.HelpForm.resources
+C:\Users\root\Downloads\1\AutoSalon\obj\Debug\AutoSalon.SendMailForm.resources

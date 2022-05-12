@@ -84,6 +84,12 @@
     <Compile Include="SelectForm.Designer.cs">
       <DependentUpon>SelectForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SendMailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SendMailForm.Designer.cs">
+      <DependentUpon>SendMailForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddCarForm.resx">
       <DependentUpon>AddCarForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +116,9 @@
     </Compile>
     <EmbeddedResource Include="SelectForm.resx">
       <DependentUpon>SelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SendMailForm.resx">
+      <DependentUpon>SendMailForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

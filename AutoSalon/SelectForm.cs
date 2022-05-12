@@ -36,6 +36,8 @@ namespace AutoSalon
             Controls.Clear();
             Controls.Add(label1);
 
+            Controls.Add(button1);
+
             int x = 20;
             int y = 10;
             foreach (KeyValuePair<Car,int> Select_Cars in selectCars)
@@ -191,6 +193,12 @@ namespace AutoSalon
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SendMailForm send = new SendMailForm();
+            send.ShowDialog();
         }
     }
 }
