@@ -37,15 +37,18 @@ namespace AutoSalon
                 mailMessage.Body = "Здравствуйте" + Environment.NewLine;
                 mailMessage.IsBodyHtml = true;
 
-                System.IO.File.WriteAllText("Ваш заказ.csv", "Название,Цена");
+                System.IO.File.WriteAllText("Ваш заказ.csv", "Название,Цена(руб.),Количество(шт.),Стоимость(руб.)");
 
                 foreach (KeyValuePair<Car, int> select_Cars in SelectForm.selectCars)
                 {
                     Car car = select_Cars.Key;
-                    System.IO.File.AppendAllText("Имя файла.csv",
+                    System.IO.File.AppendAllText("Ваш заказ.csv",
                     Environment.NewLine +
-                    car.name + "," + car.price);
+                    car.name + "," + car.price + "," + select_Cars.Value + "," + car.price* select_Cars.Value);
                 }
+
+                System.IO.File.AppendAllText("Ваш заказ.csv", 
+                    Environment.NewLine + "Общая стоимость заказа (руб.) " + SelectForm.totalPrice);
 
                 mailMessage.Attachments.Add(new Attachment("Ваш заказ.csv"));
 
@@ -60,6 +63,7 @@ namespace AutoSalon
             }
 
             MessageBox.Show("Ваша заявка отправлена");
+            Close();
         }
     }
 }

@@ -52,11 +52,23 @@
     <Compile Include="AddCarForm.Designer.cs">
       <DependentUpon>AddCarForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AuthForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthForm.Designer.cs">
+      <DependentUpon>AuthForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CarForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CarForm.Designer.cs">
       <DependentUpon>CarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FeedBackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeedBackForm.Designer.cs">
+      <DependentUpon>FeedBackForm.cs</DependentUpon>
     </Compile>
     <Compile Include="filtrForm.cs">
       <SubType>Form</SubType>
@@ -93,8 +105,14 @@
     <EmbeddedResource Include="AddCarForm.resx">
       <DependentUpon>AddCarForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AuthForm.resx">
+      <DependentUpon>AuthForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CarForm.resx">
       <DependentUpon>CarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeedBackForm.resx">
+      <DependentUpon>FeedBackForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="filtrForm.resx">
       <DependentUpon>filtrForm.cs</DependentUpon>

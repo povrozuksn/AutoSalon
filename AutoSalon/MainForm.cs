@@ -69,5 +69,26 @@ namespace AutoSalon
             add.ShowDialog();
             MainForm_Load(sender, e);
         }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            FeedBackForm feedBack = new FeedBackForm();
+            feedBack.ShowDialog();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            if(AuthForm.login == "")
+            {
+                AuthForm auth = new AuthForm();
+                auth.ShowDialog();
+            }
+            else
+            {
+                AuthForm.login = "";
+            }
+
+
+        }
     }
 }
