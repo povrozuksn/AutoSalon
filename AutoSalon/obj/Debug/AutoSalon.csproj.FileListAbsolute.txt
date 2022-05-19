@@ -63,3 +63,5 @@ C:\Users\root\Downloads\1\AutoSalon\obj\Debug\AutoSalon.AddCarForm.resources
 C:\Users\root\Downloads\1\AutoSalon\obj\Debug\AutoSalon.HelpForm.resources
 C:\Users\root\Downloads\1\AutoSalon\obj\Debug\AutoSalon.SendMailForm.resources
 C:\Users\root\Downloads\1\AutoSalon\obj\Debug\AutoSalon.FeedBackForm.resources
+C:\Users\root\Downloads\1\AutoSalon\obj\Debug\AutoSalon.AuthForm.resources
+C:\Users\root\Downloads\1\AutoSalon\obj\Debug\AutoSalon.DelCarForm.resources

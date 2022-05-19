@@ -88,7 +88,25 @@ namespace AutoSalon
                 AuthForm.login = "";
             }
 
+            if (AuthForm.login == "")
+            {
+                button16.Text = "Войти";
+                label1.Text = "";
+            }
+            else
+            {
+                button16.Text = "Выйти";
+                label1.Text = "Привет, пользователь " + AuthForm.login;
 
+            }
+
+        }
+
+        private void DelCarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DelCarForm delCar = new DelCarForm();
+            delCar.ShowDialog();
+            MainForm_Load(sender, e);
         }
     }
 }

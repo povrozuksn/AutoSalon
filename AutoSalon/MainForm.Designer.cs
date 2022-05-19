@@ -43,7 +43,6 @@ namespace AutoSalon
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -59,6 +58,7 @@ namespace AutoSalon
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.HelpButton = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.AddCarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -66,6 +66,7 @@ namespace AutoSalon
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.DelCarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
@@ -280,20 +281,6 @@ namespace AutoSalon
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.CarClick);
             // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(375, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(367, 45);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Lada Granta";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.CarClick);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -499,6 +486,20 @@ namespace AutoSalon
             this.button14.UseVisualStyleBackColor = true;
             this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(375, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(367, 45);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Lada Granta";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.CarClick);
+            // 
             // pictureBox11
             // 
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
@@ -518,15 +519,16 @@ namespace AutoSalon
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.AddToolStripMenuItem});
+            this.AddToolStripMenuItem,
+            this.DelCarToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(206, 28);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 80);
             this.contextMenuStrip1.PaddingChanged += new System.EventHandler(this.AddToolStripMenuItem_Click);
             // 
             // AddToolStripMenuItem
             // 
             this.AddToolStripMenuItem.Name = "AddToolStripMenuItem";
-            this.AddToolStripMenuItem.Size = new System.Drawing.Size(205, 24);
+            this.AddToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.AddToolStripMenuItem.Text = "Добавить машину";
             this.AddToolStripMenuItem.Click += new System.EventHandler(this.AddToolStripMenuItem_Click);
             // 
@@ -553,10 +555,17 @@ namespace AutoSalon
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(202, 20);
+            this.label1.Location = new System.Drawing.Point(216, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 17);
             this.label1.TabIndex = 3;
+            // 
+            // DelCarToolStripMenuItem
+            // 
+            this.DelCarToolStripMenuItem.Name = "DelCarToolStripMenuItem";
+            this.DelCarToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.DelCarToolStripMenuItem.Text = "Удалить машину";
+            this.DelCarToolStripMenuItem.Click += new System.EventHandler(this.DelCarToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -629,6 +638,7 @@ namespace AutoSalon
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem DelCarToolStripMenuItem;
     }
 }
 
