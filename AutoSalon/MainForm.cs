@@ -48,7 +48,6 @@ namespace AutoSalon
         {
             filtrForm.car_list.Clear();
             string[] lines = System.IO.File.ReadAllLines("Автомобили.txt");
-
             foreach(string str in lines)
             {
                 string[] parts = str.Split(new string[] {", "}, StringSplitOptions.None);

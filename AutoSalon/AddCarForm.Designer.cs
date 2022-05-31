@@ -65,6 +65,7 @@ namespace AutoSalon
             this.label1.Size = new System.Drawing.Size(72, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Название";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -99,6 +100,7 @@ namespace AutoSalon
             this.nameTB.Name = "nameTB";
             this.nameTB.Size = new System.Drawing.Size(187, 22);
             this.nameTB.TabIndex = 5;
+            this.nameTB.TextChanged += new System.EventHandler(this.nameTB_TextChanged);
             // 
             // priceTB
             // 

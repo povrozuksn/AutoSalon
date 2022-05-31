@@ -26,8 +26,24 @@ namespace AutoSalon
 
         private void button1_Click(object sender, EventArgs e)
         {
-            login = textBox1.Text;
-            Close();
+            string[] lines = System.IO.File.ReadAllLines("Users.txt");
+            foreach (string str in lines)
+            {
+                string[] parts = str.Split(new string[] { ", " }, StringSplitOptions.None);
+                if(textBox1.Text == parts[0] && textBox2.Text == parts[1])
+                {
+                    login = textBox1.Text;
+                    Close();
+                    return;
+                }                
+            }
+            MessageBox.Show("Введен неверный логин/пароль");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            RegForm reg = new RegForm();
+            reg.ShowDialog();
         }
     }
 }

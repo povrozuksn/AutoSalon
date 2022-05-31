@@ -1,7 +1,7 @@
 ﻿
 namespace AutoSalon
 {
-    partial class AuthForm
+    partial class RegForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,10 +31,10 @@ namespace AutoSalon
         {
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -42,86 +42,83 @@ namespace AutoSalon
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(21, 27);
+            this.label1.Location = new System.Drawing.Point(12, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 29);
+            this.label1.Size = new System.Drawing.Size(170, 29);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Введите логин";
+            this.label1.Text = "Введите имя ";
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(18, 69);
+            this.textBox1.Location = new System.Drawing.Point(14, 48);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(280, 34);
+            this.textBox1.Size = new System.Drawing.Size(298, 34);
             this.textBox1.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(14, 416);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(298, 43);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Зарегистрироваться";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Location = new System.Drawing.Point(18, 165);
+            this.textBox2.Location = new System.Drawing.Point(14, 189);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(280, 34);
-            this.textBox2.TabIndex = 3;
+            this.textBox2.Size = new System.Drawing.Size(298, 34);
+            this.textBox2.TabIndex = 4;
             this.textBox2.UseSystemPasswordChar = true;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(21, 123);
+            this.label2.Location = new System.Drawing.Point(9, 159);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(201, 29);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Введите пароль";
+            this.label2.Size = new System.Drawing.Size(207, 29);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Введите пароль ";
             // 
-            // button1
+            // textBox3
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(18, 239);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(280, 67);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Войти";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(18, 369);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(280, 67);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Регистрация";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox3.Location = new System.Drawing.Point(14, 286);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(298, 34);
+            this.textBox3.TabIndex = 6;
+            this.textBox3.UseSystemPasswordChar = true;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(135, 330);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(12, 256);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 20);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "или";
+            this.label3.Size = new System.Drawing.Size(256, 29);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Подтвердите пароль";
             // 
-            // AuthForm
+            // RegForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(321, 460);
+            this.ClientSize = new System.Drawing.Size(327, 484);
+            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Name = "AuthForm";
-            this.Text = "AuthForm";
-            this.Load += new System.EventHandler(this.AuthForm_Load);
+            this.Name = "RegForm";
+            this.Text = "RegForm";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,10 +128,10 @@ namespace AutoSalon
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
     }
 }

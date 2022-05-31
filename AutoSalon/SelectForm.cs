@@ -42,8 +42,7 @@ namespace AutoSalon
             int y = 10;
             foreach (KeyValuePair<Car,int> Select_Cars in selectCars)
             {
-                Car car = Select_Cars.Key;
-                
+                Car car = Select_Cars.Key;               
 
                 #region 1 столбец
                 PictureBox picture = new PictureBox();
@@ -115,7 +114,6 @@ namespace AutoSalon
                 y = y + 190;
                 
             }
-
             Calculate();
             label1.Text = "ОБЩАЯ СТОИМОСТЬ КОРЗИНЫ (РУБ.)  -  " + totalPrice.ToString();
         }
