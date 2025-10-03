@@ -42,7 +42,7 @@ namespace Autosalon
     public partial class MainForm : Form
     {
         List<Car> cars = new List<Car>();
-        string nameUser = "";
+        public static string nameUser = "";
         bool isAdmin = false;
 
         public MainForm()
@@ -220,6 +220,12 @@ namespace Autosalon
             }
             
 
+        }
+
+        private void AdminPanelButton_Click(object sender, EventArgs e)
+        {
+            AdminForm form = new AdminForm();
+            form.ShowDialog();
         }
     }
 }

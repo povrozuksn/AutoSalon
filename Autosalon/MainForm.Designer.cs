@@ -35,6 +35,8 @@
             this.PasTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.LoginTextBox = new System.Windows.Forms.TextBox();
+            this.HelloLabel = new System.Windows.Forms.Label();
+            this.AdminPanelButton = new System.Windows.Forms.Button();
             this.FilrtPanel = new System.Windows.Forms.Panel();
             this.FindButton = new System.Windows.Forms.Button();
             this.KPPComboBox = new System.Windows.Forms.ComboBox();
@@ -45,8 +47,6 @@
             this.ModelTextBox = new System.Windows.Forms.TextBox();
             this.HideButton = new System.Windows.Forms.Button();
             this.InfoPanel = new System.Windows.Forms.Panel();
-            this.HelloLabel = new System.Windows.Forms.Label();
-            this.AdminPanelButton = new System.Windows.Forms.Button();
             this.AuthPanel.SuspendLayout();
             this.FilrtPanel.SuspendLayout();
             this.SuspendLayout();
@@ -121,6 +121,25 @@
             this.LoginTextBox.Size = new System.Drawing.Size(224, 28);
             this.LoginTextBox.TabIndex = 0;
             // 
+            // HelloLabel
+            // 
+            this.HelloLabel.AutoSize = true;
+            this.HelloLabel.Location = new System.Drawing.Point(12, 21);
+            this.HelloLabel.Name = "HelloLabel";
+            this.HelloLabel.Size = new System.Drawing.Size(58, 22);
+            this.HelloLabel.TabIndex = 6;
+            this.HelloLabel.Text = "label1";
+            // 
+            // AdminPanelButton
+            // 
+            this.AdminPanelButton.Location = new System.Drawing.Point(736, 12);
+            this.AdminPanelButton.Name = "AdminPanelButton";
+            this.AdminPanelButton.Size = new System.Drawing.Size(233, 34);
+            this.AdminPanelButton.TabIndex = 7;
+            this.AdminPanelButton.Text = "Панель администратора";
+            this.AdminPanelButton.UseVisualStyleBackColor = true;
+            this.AdminPanelButton.Click += new System.EventHandler(this.AdminPanelButton_Click);
+            // 
             // FilrtPanel
             // 
             this.FilrtPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -153,7 +172,7 @@
             this.KPPComboBox.FormattingEnabled = true;
             this.KPPComboBox.Items.AddRange(new object[] {
             "",
-            "Ручная",
+            "Механическая",
             "Автоматическая",
             "Вариатор"});
             this.KPPComboBox.Location = new System.Drawing.Point(446, 42);
@@ -229,24 +248,6 @@
             this.InfoPanel.Size = new System.Drawing.Size(1028, 429);
             this.InfoPanel.TabIndex = 2;
             this.InfoPanel.Resize += new System.EventHandler(this.InfoPanel_Resize);
-            // 
-            // HelloLabel
-            // 
-            this.HelloLabel.AutoSize = true;
-            this.HelloLabel.Location = new System.Drawing.Point(12, 21);
-            this.HelloLabel.Name = "HelloLabel";
-            this.HelloLabel.Size = new System.Drawing.Size(58, 22);
-            this.HelloLabel.TabIndex = 6;
-            this.HelloLabel.Text = "label1";
-            // 
-            // AdminPanelButton
-            // 
-            this.AdminPanelButton.Location = new System.Drawing.Point(736, 12);
-            this.AdminPanelButton.Name = "AdminPanelButton";
-            this.AdminPanelButton.Size = new System.Drawing.Size(233, 34);
-            this.AdminPanelButton.TabIndex = 7;
-            this.AdminPanelButton.Text = "Панель администратора";
-            this.AdminPanelButton.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 

@@ -38,6 +38,7 @@
             this.priceLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SelectedButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -132,11 +133,21 @@
             this.textBox1.Size = new System.Drawing.Size(527, 392);
             this.textBox1.TabIndex = 9;
             // 
+            // SelectedButton
+            // 
+            this.SelectedButton.Location = new System.Drawing.Point(788, 440);
+            this.SelectedButton.Name = "SelectedButton";
+            this.SelectedButton.Size = new System.Drawing.Size(167, 38);
+            this.SelectedButton.TabIndex = 10;
+            this.SelectedButton.Text = "Выбрать";
+            this.SelectedButton.UseVisualStyleBackColor = true;
+            // 
             // PersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(980, 466);
+            this.ClientSize = new System.Drawing.Size(980, 490);
+            this.Controls.Add(this.SelectedButton);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.priceLabel);
             this.Controls.Add(this.label5);
@@ -169,5 +180,6 @@
         private System.Windows.Forms.Label priceLabel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button SelectedButton;
     }
 }

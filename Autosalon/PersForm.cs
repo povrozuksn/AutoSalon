@@ -28,6 +28,11 @@ namespace Autosalon
                 textBox1.Text = System.IO.File.ReadAllText("../../Files/" + car.name + ".txt");
             }
             catch (Exception){ }
+            SelectedButton.Visible = false;
+            if(MainForm.nameUser != "")
+            {
+                SelectedButton.Visible = true;
+            }
             
         }
     }
