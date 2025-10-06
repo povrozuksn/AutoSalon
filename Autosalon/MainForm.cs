@@ -41,7 +41,7 @@ namespace Autosalon
 
     public partial class MainForm : Form
     {
-        List<Car> cars = new List<Car>();
+        public static List<Car> cars = new List<Car>();
         public static string nameUser = "";
         bool isAdmin = false;
 
@@ -52,16 +52,22 @@ namespace Autosalon
             FilrtPanel.Height = HideButton.Height;
             HelloLabel.Visible = false;
             AdminPanelButton.Visible = false;
-            
+
+            ReRead();
+        }
+
+        void ReRead()
+        {
+            cars.Clear();
             string[] strs = File.ReadAllLines("../../Files/cars.txt");
-            foreach (string str in strs) 
+            foreach (string str in strs)
             {
-                string[] parts = str.Split(new string[] {", "}, StringSplitOptions.None);
+                string[] parts = str.Split(new string[] { ", " }, StringSplitOptions.None);
                 Car car = new Car(parts[0], parts[1], parts[2], Convert.ToInt32(parts[3]));
                 cars.Add(car);
             }
 
-            ReDraw();             
+            ReDraw();
         }
 
         private void HideButton_Click(object sender, EventArgs e)
@@ -226,6 +232,7 @@ namespace Autosalon
         {
             AdminForm form = new AdminForm();
             form.ShowDialog();
+            ReRead();
         }
     }
 }
