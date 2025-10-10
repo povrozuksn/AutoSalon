@@ -47,6 +47,7 @@
             this.ModelTextBox = new System.Windows.Forms.TextBox();
             this.HideButton = new System.Windows.Forms.Button();
             this.InfoPanel = new System.Windows.Forms.Panel();
+            this.SelectedButton = new System.Windows.Forms.Button();
             this.AuthPanel.SuspendLayout();
             this.FilrtPanel.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +55,7 @@
             // AuthPanel
             // 
             this.AuthPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.AuthPanel.Controls.Add(this.SelectedButton);
             this.AuthPanel.Controls.Add(this.RegButton);
             this.AuthPanel.Controls.Add(this.AuthButton);
             this.AuthPanel.Controls.Add(this.label3);
@@ -65,7 +67,7 @@
             this.AuthPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.AuthPanel.Location = new System.Drawing.Point(0, 0);
             this.AuthPanel.Name = "AuthPanel";
-            this.AuthPanel.Size = new System.Drawing.Size(1028, 59);
+            this.AuthPanel.Size = new System.Drawing.Size(1149, 59);
             this.AuthPanel.TabIndex = 0;
             // 
             // RegButton
@@ -154,7 +156,7 @@
             this.FilrtPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.FilrtPanel.Location = new System.Drawing.Point(0, 59);
             this.FilrtPanel.Name = "FilrtPanel";
-            this.FilrtPanel.Size = new System.Drawing.Size(1028, 131);
+            this.FilrtPanel.Size = new System.Drawing.Size(1149, 131);
             this.FilrtPanel.TabIndex = 1;
             // 
             // FindButton
@@ -245,15 +247,25 @@
             this.InfoPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InfoPanel.Location = new System.Drawing.Point(0, 190);
             this.InfoPanel.Name = "InfoPanel";
-            this.InfoPanel.Size = new System.Drawing.Size(1028, 429);
+            this.InfoPanel.Size = new System.Drawing.Size(1149, 429);
             this.InfoPanel.TabIndex = 2;
             this.InfoPanel.Resize += new System.EventHandler(this.InfoPanel_Resize);
+            // 
+            // SelectedButton
+            // 
+            this.SelectedButton.Location = new System.Drawing.Point(975, 12);
+            this.SelectedButton.Name = "SelectedButton";
+            this.SelectedButton.Size = new System.Drawing.Size(162, 33);
+            this.SelectedButton.TabIndex = 8;
+            this.SelectedButton.Text = "В избранное";
+            this.SelectedButton.UseVisualStyleBackColor = true;
+            this.SelectedButton.Click += new System.EventHandler(this.SelectedButton_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 619);
+            this.ClientSize = new System.Drawing.Size(1149, 619);
             this.Controls.Add(this.InfoPanel);
             this.Controls.Add(this.FilrtPanel);
             this.Controls.Add(this.AuthPanel);
@@ -290,6 +302,7 @@
         private System.Windows.Forms.Button FindButton;
         private System.Windows.Forms.Label HelloLabel;
         private System.Windows.Forms.Button AdminPanelButton;
+        private System.Windows.Forms.Button SelectedButton;
     }
 }
 

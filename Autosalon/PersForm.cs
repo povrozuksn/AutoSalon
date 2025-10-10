@@ -14,9 +14,13 @@ namespace Autosalon
 {
     public partial class PersForm : Form
     {
-        public PersForm(Car car)
+        Car car;
+        public PersForm(Car _car)
         {
             InitializeComponent();
+
+            car = _car;
+
             Text = car.name;
             nameLabel.Text = car.name;
             kuzovLabel.Text = car.kuzov;
@@ -32,8 +36,12 @@ namespace Autosalon
             if(MainForm.nameUser != "")
             {
                 SelectedButton.Visible = true;
-            }
-            
+            }            
+        }
+
+        private void SelectedButton_Click(object sender, EventArgs e)
+        {
+            SelectedForm.cars_selected.Add(car);
         }
     }
 }

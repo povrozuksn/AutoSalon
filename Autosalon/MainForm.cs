@@ -52,6 +52,7 @@ namespace Autosalon
             FilrtPanel.Height = HideButton.Height;
             HelloLabel.Visible = false;
             AdminPanelButton.Visible = false;
+            SelectedButton.Visible = false;
 
             ReRead();
         }
@@ -218,6 +219,8 @@ namespace Autosalon
                     HelloLabel.Text = "Вы авторизовались как " + nameUser;
                     HelloLabel.Visible = true;
                     AuthButton.Text = "Выйти";
+                    AuthPanel.Controls.Add(SelectedButton);
+                    SelectedButton.Visible = true;
                 }
                 else
                 {
@@ -233,6 +236,12 @@ namespace Autosalon
             AdminForm form = new AdminForm();
             form.ShowDialog();
             ReRead();
+        }
+
+        private void SelectedButton_Click(object sender, EventArgs e)
+        {
+            SelectedForm selected = new SelectedForm();
+            selected.ShowDialog();
         }
     }
 }

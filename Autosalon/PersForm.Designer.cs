@@ -141,6 +141,7 @@
             this.SelectedButton.TabIndex = 10;
             this.SelectedButton.Text = "Выбрать";
             this.SelectedButton.UseVisualStyleBackColor = true;
+            this.SelectedButton.Click += new System.EventHandler(this.SelectedButton_Click);
             // 
             // PersForm
             // 
