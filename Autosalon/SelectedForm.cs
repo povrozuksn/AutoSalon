@@ -12,15 +12,19 @@ namespace Autosalon
 {
     public partial class SelectedForm : Form
     {
-        public static List<Car> cars_selected = new List<Car>();
+        //public static List<Car> cars_selected = new List<Car>();
+        public static Dictionary<Car, int> cars_selected = new Dictionary<Car, int>();
+
         public SelectedForm()
         {
             InitializeComponent();
             UserLabel.Text = "Избранное пользователя: " + MainForm.nameUser;
 
             int x=50; int y=50;
-            foreach (Car car in cars_selected)
+            foreach (KeyValuePair<Car, int> car_select in cars_selected)
             {
+                Car car = car_select.Key;
+
                 #region 1 столбец
                 PictureBox picture = new PictureBox();
                 picture.Location = new Point(x, y);
@@ -34,7 +38,6 @@ namespace Autosalon
                 Label name_label = new Label();
                 name_label.Location = new Point(x+240, y);
                 name_label.Size = new Size(300, 30);
-                //name_label.BorderStyle = BorderStyle.FixedSingle;
                 name_label.Text = "Наименование: " + car.name;
                 Controls.Add(name_label);
 
@@ -54,13 +57,57 @@ namespace Autosalon
                 #region 3 столбец
                 Label price_label = new Label();
                 price_label.Location = new Point(x + 550, y);
-                price_label.Size = new Size(300, 30);
+                price_label.Size = new Size(200, 30);
+                //price_label.BorderStyle = BorderStyle.FixedSingle;
                 price_label.Text = "Цена, руб.: " + car.price;
                 Controls.Add(price_label);
+
+                Label count_label = new Label();
+                count_label.Location = new Point(x + 550, y + 40);
+                count_label.Size = new Size(150, 20);
+                count_label.Text = "Количество, шт.: ";
+                Controls.Add(count_label);
+
+                NumericUpDown count = new NumericUpDown();
+                count.Location = new Point(x + 550, y + 60);
+                count.Size = new Size(150, 30);
+                count.Value = car_select.Value;
+                Controls.Add(count);
+                #endregion
+
+                #region 4 столбец
+                Button del = new Button();
+                del.Location = new Point(x + 850, y+50);
+                del.Size = new Size(150, 60);
+                del.BackColor = Color.Red;
+                del.Text = "Удалить из избранного";
+                del.Click += new EventHandler(DelClick);
+                Controls.Add(del);
                 #endregion
 
                 y += 200;
 
+            }
+
+            void DelClick(object sender, EventArgs e)
+            {
+                int i = 0;
+                Button bnt = (Button)sender;
+                Dictionary<Car, int> cars_selected1 = new Dictionary<Car, int>();
+                foreach (KeyValuePair<Car, int> car_select in cars_selected)
+                {
+                    Car car = car_select.Key;
+                    if(bnt.Location == new Point(900, 200 * i + 100))
+                    {
+
+                    }
+                    else
+                    {
+                        cars_selected1[car_select.Key] = car_select.Value;
+                    }
+                    i++;
+                }
+                cars_selected = cars_selected1;
             }
 
         }

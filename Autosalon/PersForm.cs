@@ -41,7 +41,14 @@ namespace Autosalon
 
         private void SelectedButton_Click(object sender, EventArgs e)
         {
-            SelectedForm.cars_selected.Add(car);
+            if(SelectedForm.cars_selected.ContainsKey(car))
+            {
+                SelectedForm.cars_selected[car]++;
+            }
+            else
+            {
+                SelectedForm.cars_selected.Add(car, 1);
+            }
         }
     }
 }
