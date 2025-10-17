@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.UserLabel = new System.Windows.Forms.Label();
+            this.totalPriceLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // UserLabel
@@ -40,12 +41,22 @@
             this.UserLabel.TabIndex = 0;
             this.UserLabel.Text = "label1";
             // 
+            // totalPriceLabel
+            // 
+            this.totalPriceLabel.AutoSize = true;
+            this.totalPriceLabel.Location = new System.Drawing.Point(533, 9);
+            this.totalPriceLabel.Name = "totalPriceLabel";
+            this.totalPriceLabel.Size = new System.Drawing.Size(58, 22);
+            this.totalPriceLabel.TabIndex = 1;
+            this.totalPriceLabel.Text = "label1";
+            // 
             // SelectedForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1220, 693);
+            this.Controls.Add(this.totalPriceLabel);
             this.Controls.Add(this.UserLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -59,5 +70,6 @@
         #endregion
 
         private System.Windows.Forms.Label UserLabel;
+        private System.Windows.Forms.Label totalPriceLabel;
     }
 }

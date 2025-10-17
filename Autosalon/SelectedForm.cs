@@ -12,7 +12,6 @@ namespace Autosalon
 {
     public partial class SelectedForm : Form
     {
-        //public static List<Car> cars_selected = new List<Car>();
         public static Dictionary<Car, int> cars_selected = new Dictionary<Car, int>();
 
         public SelectedForm()
@@ -20,7 +19,16 @@ namespace Autosalon
             InitializeComponent();
             UserLabel.Text = "Избранное пользователя: " + MainForm.nameUser;
 
-            int x=50; int y=50;
+            ReDraw();
+        }
+
+        void ReDraw()
+        {
+            Controls.Clear();
+            Controls.Add(UserLabel);
+            Controls.Add(totalPriceLabel);
+
+            int x = 50; int y = 50;
             foreach (KeyValuePair<Car, int> car_select in cars_selected)
             {
                 Car car = car_select.Key;
@@ -36,13 +44,13 @@ namespace Autosalon
 
                 #region 2 столбец
                 Label name_label = new Label();
-                name_label.Location = new Point(x+240, y);
+                name_label.Location = new Point(x + 240, y);
                 name_label.Size = new Size(300, 30);
                 name_label.Text = "Наименование: " + car.name;
                 Controls.Add(name_label);
 
                 Label kuzov_label = new Label();
-                kuzov_label.Location = new Point(x + 240, y+40);
+                kuzov_label.Location = new Point(x + 240, y + 40);
                 kuzov_label.Size = new Size(300, 30);
                 kuzov_label.Text = "Тип кузова: " + car.kuzov;
                 Controls.Add(kuzov_label);
@@ -72,12 +80,19 @@ namespace Autosalon
                 count.Location = new Point(x + 550, y + 60);
                 count.Size = new Size(150, 30);
                 count.Value = car_select.Value;
+                count.ValueChanged += new EventHandler(CountChanged);
                 Controls.Add(count);
+
+                Label stoimot_label = new Label();
+                stoimot_label.Location = new Point(x + 550, y + 90);
+                stoimot_label.Size = new Size(250, 20);
+                stoimot_label.Text = "Стоимость, руб.: " + car_select.Value* car.price;
+                Controls.Add(stoimot_label);
                 #endregion
 
                 #region 4 столбец
                 Button del = new Button();
-                del.Location = new Point(x + 850, y+50);
+                del.Location = new Point(x + 850, y + 50);
                 del.Size = new Size(150, 60);
                 del.BackColor = Color.Red;
                 del.Text = "Удалить из избранного";
@@ -89,27 +104,92 @@ namespace Autosalon
 
             }
 
-            void DelClick(object sender, EventArgs e)
+            totalPrice = 0;
+            foreach (KeyValuePair<Car, int> car_select in cars_selected)
             {
-                int i = 0;
-                Button bnt = (Button)sender;
-                Dictionary<Car, int> cars_selected1 = new Dictionary<Car, int>();
-                foreach (KeyValuePair<Car, int> car_select in cars_selected)
-                {
-                    Car car = car_select.Key;
-                    if(bnt.Location == new Point(900, 200 * i + 100))
-                    {
+                totalPrice += car_select.Value * car_select.Key.price;
+            }
+            totalPriceLabel.Text = "Общая стоимость, руб.: " + totalPrice.ToString();
+        }
 
-                    }
-                    else
-                    {
-                        cars_selected1[car_select.Key] = car_select.Value;
-                    }
-                    i++;
+        void DelClick(object sender, EventArgs e)
+        {
+            int i = 0;
+            Button bnt = (Button)sender;
+            Dictionary<Car, int> cars_selected1 = new Dictionary<Car, int>();
+            foreach (KeyValuePair<Car, int> car_select in cars_selected)
+            {
+                Car car = car_select.Key;
+                if (bnt.Location == new Point(900, 200 * i + 100))
+                {
+
                 }
-                cars_selected = cars_selected1;
+                else
+                {
+                    cars_selected1[car_select.Key] = car_select.Value;
+                }
+                i++;
+            }
+            cars_selected = cars_selected1;
+            ReDraw();
+        }
+
+        int totalPrice = 0;
+        void CountChanged(object sender, EventArgs e)
+        {
+            NumericUpDown num = (NumericUpDown)sender;
+
+            for(int i=0; i<cars_selected.Count; i++)
+            {
+                if (num.Location == new Point(600, 200 * i + 110))
+                {
+                    Image image = null;
+                    int price = 0;
+                    foreach (Control ctrl in Controls)
+                    {
+                        if (ctrl is PictureBox && ctrl.Location == new Point(50, 200 * i + 50))
+                        {
+                            image = ((PictureBox)ctrl).Image;
+                        }
+                    }
+
+                    foreach (Car car in MainForm.cars)
+                    {
+                        if (car.pic.Image == image)
+                        {
+                            cars_selected[car] = Convert.ToInt32(num.Value);
+                        }
+                    }
+
+                    foreach (Control ctrl in Controls)
+                    {
+                        if (ctrl is Label && ctrl.Location == new Point(600, 200 * i + 50))
+                        {
+                            price = Convert.ToInt32(ctrl.Text.Replace("Цена, руб.: ", ""));
+                        }
+                    }
+
+                    foreach (Control ctrl in Controls)
+                    {
+                        if (ctrl is Label && ctrl.Location == new Point(600, 200 * i + 140))
+                        {
+                            ctrl.Text = "Стоимость, руб.: " + (price * num.Value).ToString();
+                        }
+                    }
+                }
             }
 
+            totalPrice = 0;
+            foreach (KeyValuePair<Car, int> car_select in cars_selected)
+            {
+                totalPrice += car_select.Value * car_select.Key.price;
+            }
+            totalPriceLabel.Text = "Общая стоимость, руб.: " + totalPrice.ToString();
+
         }
+
+
+
+
     }
 }
