@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using MySql.Data.MySqlClient;
 
 namespace Autosalon
 {
@@ -41,6 +42,11 @@ namespace Autosalon
 
     public partial class MainForm : Form
     {
+        public const string CONNECTION_STRING =
+        "SslMode=none;Server=localhost;Database=autosalon;port=3306;Uid=root;charset=utf8";
+
+        public static MySqlConnection CONN;
+
         public static List<Car> cars = new List<Car>();
         public static string nameUser = "";
         bool isAdmin = false;
