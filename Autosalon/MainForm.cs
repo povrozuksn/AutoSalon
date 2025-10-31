@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using MySql.Data.MySqlClient;
+using System.Data.Common;
 
 namespace Autosalon
 {
@@ -47,30 +48,46 @@ namespace Autosalon
 
         public static MySqlConnection CONN;
 
+        public static List<string> mySelect(string cmdText)
+        {
+            List<string> list = new List<string>();
+            MySqlCommand command = new MySqlCommand(cmdText, CONN);
+            DbDataReader dr = command.ExecuteReader();
+            while (dr.Read()) 
+            { 
+                for(int i=0; i<dr.FieldCount; i++)
+                {
+                    list.Add(dr.GetValue(i).ToString());
+                }
+            }
+            dr.Close();
+            return list;
+        }
+
+
         public static List<Car> cars = new List<Car>();
         public static string nameUser = "";
         bool isAdmin = false;
 
         public MainForm()
         {
-            InitializeComponent();
+            InitializeComponent();            
 
             FilrtPanel.Height = HideButton.Height;
             HelloLabel.Visible = false;
             AdminPanelButton.Visible = false;
             SelectedButton.Visible = false;
 
-            ReRead();
+            ReRead_SQL();
         }
-
-        void ReRead()
+        void ReRead_SQL()
         {
+            List<string> cars_list = mySelect("SELECT id, name, kuzov, kpp, price FROM cars");
+
             cars.Clear();
-            string[] strs = File.ReadAllLines("../../Files/cars.txt");
-            foreach (string str in strs)
+            for (int i=0; i<cars_list.Count; i+=5)
             {
-                string[] parts = str.Split(new string[] { ", " }, StringSplitOptions.None);
-                Car car = new Car(parts[0], parts[1], parts[2], Convert.ToInt32(parts[3]));
+                Car car = new Car(cars_list[i+1], cars_list[i+2], cars_list[i+3], Convert.ToInt32(cars_list[i+4]));
                 cars.Add(car);
             }
 
@@ -241,7 +258,7 @@ namespace Autosalon
         {
             AdminForm form = new AdminForm();
             form.ShowDialog();
-            ReRead();
+            //ReRead();
         }
 
         private void SelectedButton_Click(object sender, EventArgs e)
