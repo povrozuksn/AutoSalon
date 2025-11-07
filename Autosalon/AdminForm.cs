@@ -37,19 +37,13 @@ namespace Autosalon
                 MessageBox.Show("Поля с * обязательны для заполнения");
                 return;
             }
-
-            File.AppendAllText("../../Files/cars.txt", ModelTextBox.Text + ", " +
-                                                                 KuzovComboBox.Text + ", " +
-                                                                 KPPComboBox.Text + ", " +
-                                                                 PriceTextBox.Text + 
-                                                                 Environment.NewLine);
+            
+            SQLClass.myUpdate("INSERT INTO cars (name, kuzov, kpp, price, opis) VALUES ('" + ModelTextBox.Text + "', '" + KuzovComboBox.Text + "', '" + KPPComboBox.Text + "', '" + PriceTextBox.Text + "', '" + OpisTextBox.Text + "')");
 
             if(FileName != "")
             {
                 File.Copy(FileName, "../../Files/" + ModelTextBox.Text + ".jpg");
             }
-
-            File.AppendAllText("../../Files/" + ModelTextBox.Text + ".txt", OpisTextBox.Text);
             
             MessageBox.Show("Сохранено");
             var result = MessageBox.Show("Вы хотите продолжить добавление объектов", "Следующий шаг", MessageBoxButtons.YesNo);
@@ -85,26 +79,16 @@ namespace Autosalon
         {
             var result = MessageBox.Show("Вы действительно хотите удалить выбранный объект", "Удаление объекта", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
-            {
-                File.Delete("../../Files/cars.txt");
+            {                           
                 for(int i=0; i<MainForm.cars.Count; i++)
                 {
                     if(textBox1.Text == MainForm.cars[i].name)
                     {
-
-                    }
-                    else
-                    {
-                        File.AppendAllText("../../Files/cars.txt", MainForm.cars[i].name + ", " +
-                                                                 MainForm.cars[i].kuzov + ", " +
-                                                                 MainForm.cars[i].kpp + ", " +
-                                                                 MainForm.cars[i].price +
-                                                                 Environment.NewLine);
-                    }
-                }
-                MessageBox.Show("Удалено");
+                        SQLClass.myUpdate("DELETE FROM cars WHERE name = '"+ MainForm.cars[i].name + "'");
+                        MessageBox.Show("Удалено");
+                    }                    
+                } 
             }
-
         }
     }
 }

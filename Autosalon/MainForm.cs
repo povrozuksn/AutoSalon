@@ -43,28 +43,6 @@ namespace Autosalon
 
     public partial class MainForm : Form
     {
-        public const string CONNECTION_STRING =
-        "SslMode=none;Server=localhost;Database=autosalon;port=3306;Uid=root;charset=utf8";
-
-        public static MySqlConnection CONN;
-
-        public static List<string> mySelect(string cmdText)
-        {
-            List<string> list = new List<string>();
-            MySqlCommand command = new MySqlCommand(cmdText, CONN);
-            DbDataReader dr = command.ExecuteReader();
-            while (dr.Read()) 
-            { 
-                for(int i=0; i<dr.FieldCount; i++)
-                {
-                    list.Add(dr.GetValue(i).ToString());
-                }
-            }
-            dr.Close();
-            return list;
-        }
-
-
         public static List<Car> cars = new List<Car>();
         public static string nameUser = "";
         bool isAdmin = false;
@@ -78,11 +56,11 @@ namespace Autosalon
             AdminPanelButton.Visible = false;
             SelectedButton.Visible = false;
 
-            ReRead_SQL();
+            ReRead();
         }
-        void ReRead_SQL()
+        void ReRead()
         {
-            List<string> cars_list = mySelect("SELECT id, name, kuzov, kpp, price FROM cars");
+            List<string> cars_list = SQLClass.mySelect("SELECT id, name, kuzov, kpp, price FROM cars");
 
             cars.Clear();
             for (int i=0; i<cars_list.Count; i+=5)
@@ -201,15 +179,14 @@ namespace Autosalon
 
         private void AuthButton_Click(object sender, EventArgs e)
         {
-            string[] strs = File.ReadAllLines("users.txt");
-            foreach (string str in strs) 
-            {
-                string[] parts = str.Split(new string[] { ", " }, StringSplitOptions.None);
-                
-                if(LoginTextBox.Text == parts[2] && PasTextBox.Text == parts[3])
+            List<string> users_list = SQLClass.mySelect("SELECT id, name, family, login, password, admin FROM users");
+            
+            for (int i=0; i<users_list.Count; i+=6) 
+            {                
+                if(LoginTextBox.Text == users_list[i+3] && PasTextBox.Text == users_list[i+4])
                 {
-                    nameUser = parts[0] + " " + parts[1];
-                    isAdmin = (parts[4] == "1");
+                    nameUser = users_list[i+1] + " " + users_list[i+2];
+                    isAdmin = (users_list[i+5] == "1");
                     break;
                 }
             }

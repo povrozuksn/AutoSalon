@@ -29,7 +29,7 @@ namespace Autosalon
             pictureBox1.Image = car.pic.Image;
             try
             {
-                textBox1.Text = System.IO.File.ReadAllText("../../Files/" + car.name + ".txt");
+                textBox1.Text = SQLClass.mySelect("SELECT opis FROM cars WHERE name = '" + car.name + "'")[0];
             }
             catch (Exception){ }
             SelectedButton.Visible = false;

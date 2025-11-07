@@ -18,12 +18,12 @@ namespace Autosalon
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            MainForm.CONN = new MySqlConnection(MainForm.CONNECTION_STRING);
-            MainForm.CONN.Open();
+            SQLClass.CONN = new MySqlConnection(SQLClass.CONNECTION_STRING);
+            SQLClass.CONN.Open();
             
             Application.Run(new MainForm());
 
-            MainForm.CONN.Close();
+            SQLClass.CONN.Close();
         }
     }
 }

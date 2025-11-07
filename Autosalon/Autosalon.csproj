@@ -81,6 +81,7 @@
     <Compile Include="SelectedForm.Designer.cs">
       <DependentUpon>SelectedForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SQLClass.cs" />
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>

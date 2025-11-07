@@ -21,11 +21,7 @@ namespace Autosalon
         {
             if (PassTextBox.Text == RePassTextBox.Text)
             {
-                System.IO.File.AppendAllText("users.txt",
-                                         NameTextBox.Text + ", " +
-                                         FamTextBox.Text + ", " +
-                                         LoginTextBox.Text + ", " +
-                                         PassTextBox.Text + ", 0" + Environment.NewLine);
+                SQLClass.myUpdate("INSERT INTO users (name, family, login, password, admin) VALUES ('" + NameTextBox.Text + "', '" + FamTextBox.Text + "', '" + LoginTextBox.Text + "', '" + PassTextBox.Text + "', 0)");
                 MessageBox.Show("Регистрация прошла успешно");
                 Close();
             }
