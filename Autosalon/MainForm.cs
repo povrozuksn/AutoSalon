@@ -33,7 +33,7 @@ namespace Autosalon
             pic.Tag = name;
             try
             {
-                pic.Load("../../Files/" + name + ".jpg");
+                pic.Load("http://127.0.0.1/autosalon/image/" + name + ".jpg");
             }
             catch (Exception) { }
             lbl = new Label();
@@ -100,6 +100,7 @@ namespace Autosalon
 
         void ReDraw()
         {
+            InfoPanel.Controls.Clear();
             int x = 20;
             int y = 20;
             for (int i = 0; i < cars.Count; i++)
@@ -235,7 +236,7 @@ namespace Autosalon
         {
             AdminForm form = new AdminForm();
             form.ShowDialog();
-            //ReRead();
+            ReRead();
         }
 
         private void SelectedButton_Click(object sender, EventArgs e)

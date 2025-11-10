@@ -42,7 +42,7 @@ namespace Autosalon
 
             if(FileName != "")
             {
-                File.Copy(FileName, "../../Files/" + ModelTextBox.Text + ".jpg");
+                File.Copy(FileName, "http://localhost/autosalon/image/" + ModelTextBox.Text + ".jpg");
             }
             
             MessageBox.Show("Сохранено");
@@ -86,6 +86,8 @@ namespace Autosalon
                     {
                         SQLClass.myUpdate("DELETE FROM cars WHERE name = '"+ MainForm.cars[i].name + "'");
                         MessageBox.Show("Удалено");
+                        DelComboBox1.Text = "";
+                        textBox1.Text = "";
                     }                    
                 } 
             }
