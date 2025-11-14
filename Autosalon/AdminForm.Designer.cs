@@ -56,6 +56,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.HelpAddButton = new System.Windows.Forms.Button();
+            this.HelpDelButton = new System.Windows.Forms.Button();
             this.AddPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.DelPanel.SuspendLayout();
@@ -64,6 +66,7 @@
             // AddPanel
             // 
             this.AddPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.AddPanel.Controls.Add(this.HelpAddButton);
             this.AddPanel.Controls.Add(this.label14);
             this.AddPanel.Controls.Add(this.label13);
             this.AddPanel.Controls.Add(this.label12);
@@ -86,14 +89,14 @@
             this.AddPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.AddPanel.Location = new System.Drawing.Point(0, 0);
             this.AddPanel.Name = "AddPanel";
-            this.AddPanel.Size = new System.Drawing.Size(1169, 470);
+            this.AddPanel.Size = new System.Drawing.Size(1169, 505);
             this.AddPanel.TabIndex = 0;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.Location = new System.Drawing.Point(40, 369);
+            this.label14.Location = new System.Drawing.Point(40, 406);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(258, 18);
             this.label14.TabIndex = 20;
@@ -105,7 +108,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(25, 367);
+            this.label13.Location = new System.Drawing.Point(25, 404);
             this.label13.Margin = new System.Windows.Forms.Padding(0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(23, 29);
@@ -119,7 +122,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(25, 293);
+            this.label12.Location = new System.Drawing.Point(25, 330);
             this.label12.Margin = new System.Windows.Forms.Padding(0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(23, 29);
@@ -133,7 +136,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(25, 211);
+            this.label11.Location = new System.Drawing.Point(25, 248);
             this.label11.Margin = new System.Windows.Forms.Padding(0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(23, 29);
@@ -147,7 +150,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(25, 125);
+            this.label10.Location = new System.Drawing.Point(25, 162);
             this.label10.Margin = new System.Windows.Forms.Padding(0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(23, 29);
@@ -161,7 +164,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(25, 47);
+            this.label9.Location = new System.Drawing.Point(25, 84);
             this.label9.Margin = new System.Windows.Forms.Padding(0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(23, 29);
@@ -173,7 +176,7 @@
             // 
             this.AddButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.AddButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.AddButton.Location = new System.Drawing.Point(0, 422);
+            this.AddButton.Location = new System.Drawing.Point(0, 457);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(1169, 48);
             this.AddButton.TabIndex = 14;
@@ -183,7 +186,7 @@
             // 
             // LoadButton
             // 
-            this.LoadButton.Location = new System.Drawing.Point(346, 359);
+            this.LoadButton.Location = new System.Drawing.Point(346, 396);
             this.LoadButton.Name = "LoadButton";
             this.LoadButton.Size = new System.Drawing.Size(368, 37);
             this.LoadButton.TabIndex = 13;
@@ -193,7 +196,7 @@
             // 
             // OpisTextBox
             // 
-            this.OpisTextBox.Location = new System.Drawing.Point(746, 18);
+            this.OpisTextBox.Location = new System.Drawing.Point(746, 55);
             this.OpisTextBox.Multiline = true;
             this.OpisTextBox.Name = "OpisTextBox";
             this.OpisTextBox.Size = new System.Drawing.Size(411, 378);
@@ -202,7 +205,7 @@
             // picBox
             // 
             this.picBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.picBox.Location = new System.Drawing.Point(346, 20);
+            this.picBox.Location = new System.Drawing.Point(346, 57);
             this.picBox.Name = "picBox";
             this.picBox.Size = new System.Drawing.Size(369, 333);
             this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -211,7 +214,7 @@
             // 
             // PriceTextBox
             // 
-            this.PriceTextBox.Location = new System.Drawing.Point(30, 325);
+            this.PriceTextBox.Location = new System.Drawing.Point(30, 362);
             this.PriceTextBox.Name = "PriceTextBox";
             this.PriceTextBox.Size = new System.Drawing.Size(281, 28);
             this.PriceTextBox.TabIndex = 10;
@@ -219,7 +222,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(49, 300);
+            this.label5.Location = new System.Drawing.Point(49, 337);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 22);
             this.label5.TabIndex = 9;
@@ -233,7 +236,7 @@
             "Механическая",
             "Автоматическая",
             "Вариатор"});
-            this.KPPComboBox.Location = new System.Drawing.Point(30, 241);
+            this.KPPComboBox.Location = new System.Drawing.Point(30, 278);
             this.KPPComboBox.Name = "KPPComboBox";
             this.KPPComboBox.Size = new System.Drawing.Size(281, 30);
             this.KPPComboBox.TabIndex = 8;
@@ -241,7 +244,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(49, 216);
+            this.label6.Location = new System.Drawing.Point(49, 253);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 22);
             this.label6.TabIndex = 7;
@@ -256,7 +259,7 @@
             "Универсал",
             "Хетчбэк",
             "Внедорожник"});
-            this.KuzovComboBox.Location = new System.Drawing.Point(30, 157);
+            this.KuzovComboBox.Location = new System.Drawing.Point(30, 194);
             this.KuzovComboBox.Name = "KuzovComboBox";
             this.KuzovComboBox.Size = new System.Drawing.Size(281, 30);
             this.KuzovComboBox.TabIndex = 5;
@@ -264,7 +267,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(49, 132);
+            this.label4.Location = new System.Drawing.Point(49, 169);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 22);
             this.label4.TabIndex = 3;
@@ -272,7 +275,7 @@
             // 
             // ModelTextBox
             // 
-            this.ModelTextBox.Location = new System.Drawing.Point(30, 79);
+            this.ModelTextBox.Location = new System.Drawing.Point(30, 116);
             this.ModelTextBox.Name = "ModelTextBox";
             this.ModelTextBox.Size = new System.Drawing.Size(281, 28);
             this.ModelTextBox.TabIndex = 2;
@@ -280,7 +283,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 54);
+            this.label3.Location = new System.Drawing.Point(49, 91);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 22);
             this.label3.TabIndex = 1;
@@ -289,7 +292,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(12, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(253, 22);
             this.label1.TabIndex = 0;
@@ -298,6 +301,7 @@
             // DelPanel
             // 
             this.DelPanel.BackColor = System.Drawing.Color.Silver;
+            this.DelPanel.Controls.Add(this.HelpDelButton);
             this.DelPanel.Controls.Add(this.DelButton);
             this.DelPanel.Controls.Add(this.label8);
             this.DelPanel.Controls.Add(this.textBox1);
@@ -305,9 +309,9 @@
             this.DelPanel.Controls.Add(this.label7);
             this.DelPanel.Controls.Add(this.label2);
             this.DelPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DelPanel.Location = new System.Drawing.Point(0, 470);
+            this.DelPanel.Location = new System.Drawing.Point(0, 505);
             this.DelPanel.Name = "DelPanel";
-            this.DelPanel.Size = new System.Drawing.Size(1169, 129);
+            this.DelPanel.Size = new System.Drawing.Size(1169, 131);
             this.DelPanel.TabIndex = 1;
             // 
             // DelButton
@@ -371,11 +375,31 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // HelpAddButton
+            // 
+            this.HelpAddButton.Location = new System.Drawing.Point(1120, 12);
+            this.HelpAddButton.Name = "HelpAddButton";
+            this.HelpAddButton.Size = new System.Drawing.Size(36, 34);
+            this.HelpAddButton.TabIndex = 21;
+            this.HelpAddButton.Text = "?";
+            this.HelpAddButton.UseVisualStyleBackColor = true;
+            this.HelpAddButton.Click += new System.EventHandler(this.HelpAddButton_Click);
+            // 
+            // HelpDelButton
+            // 
+            this.HelpDelButton.Location = new System.Drawing.Point(1120, 7);
+            this.HelpDelButton.Name = "HelpDelButton";
+            this.HelpDelButton.Size = new System.Drawing.Size(36, 34);
+            this.HelpDelButton.TabIndex = 22;
+            this.HelpDelButton.Text = "?";
+            this.HelpDelButton.UseVisualStyleBackColor = true;
+            this.HelpDelButton.Click += new System.EventHandler(this.HelpDelButton_Click);
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1169, 599);
+            this.ClientSize = new System.Drawing.Size(1169, 636);
             this.Controls.Add(this.DelPanel);
             this.Controls.Add(this.AddPanel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -421,5 +445,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button HelpAddButton;
+        private System.Windows.Forms.Button HelpDelButton;
     }
 }

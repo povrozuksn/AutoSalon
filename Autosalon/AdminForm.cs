@@ -9,6 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Xml.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using MySql.Data.MySqlClient.Memcached;
+using RestSharp;
+
 
 namespace Autosalon
 {
@@ -21,9 +27,9 @@ namespace Autosalon
             {
                 DelComboBox1.Items.Add(MainForm.cars[i].name);
             }
-        }
+        } 
 
-        private void AddButton_Click(object sender, EventArgs e)
+        private async void AddButton_Click(object sender, EventArgs e)
         {
             int a;
             if(!Int32.TryParse(PriceTextBox.Text, out a))
@@ -39,10 +45,58 @@ namespace Autosalon
             }
             
             SQLClass.myUpdate("INSERT INTO cars (name, kuzov, kpp, price, opis) VALUES ('" + ModelTextBox.Text + "', '" + KuzovComboBox.Text + "', '" + KPPComboBox.Text + "', '" + PriceTextBox.Text + "', '" + OpisTextBox.Text + "')");
-
-            if(FileName != "")
+            
+            if (FileName != "")
             {
-                File.Copy(FileName, "http://localhost/autosalon/image/" + ModelTextBox.Text + ".jpg");
+                File.Copy(FileName, "../../Files/" + ModelTextBox.Text + ".jpg");
+
+                #region
+                /*
+                using (var f = System.IO.File.OpenRead(@FileName))
+                {
+                    var client = new HttpClient();
+                    var content = new StreamContent(f);
+                    var mpcontent = new MultipartFormDataContent();
+                    content.Headers.ContentType = new MediaTypeHeaderValue("image/jpeg");
+                    mpcontent.Add(content);
+                    await client.PostAsync("http://localhost/autosalon/image", mpcontent);
+                }
+                */
+                /*
+                // URL конечной точки REST API  
+                string apiUrl = "http://localhost/autosalon/image";
+                // Путь к файлу изображения  
+                string imagePath = FileName;
+                // Создать экземпляр HttpClient  
+                using (HttpClient httpClient = new HttpClient())
+                {
+                    // Читать файл изображения в байты  
+                    byte[] imageData = File.ReadAllBytes(imagePath);
+                    // Создать ByteArrayContent для данных изображения  
+                    ByteArrayContent content = new ByteArrayContent(imageData);
+                    // Установить тип содержимого — «multipart/form-data»  
+                    content.Headers.ContentType = MediaTypeHeaderValue.Parse("multipart/form-data");
+                    // Создать MultipartFormDataContent с данными изображения  
+                    using (MultipartFormDataContent formData = new MultipartFormDataContent())
+                    {
+                        // Добавить содержимое изображения в данные формы  
+                        formData.Add(content, "image", FileName);
+                        // Отправить данные формы на конечную точку API  
+                        HttpResponseMessage response = await httpClient.PostAsync(apiUrl, formData);
+                    }
+                }*/
+                /*
+                // Создать новый экземпляр RestClient и установить базовый URL конечной точки API  
+                var client = new RestClient("http://localhost/autosalon/image/");
+                // Создать новый экземпляр RestRequest и установить метод HTTP — POST  
+                var request = new RestRequest("endpoint", Method.Post);
+                // Добавить файл в запрос в виде массива байтов  
+                byte[] fileBytes = File.ReadAllBytes(FileName);
+                request.AddFile("file", fileBytes, "file.jpg");
+                // Выполнить запрос  
+                var response = client.Execute(request);
+                */
+                #endregion
             }
             
             MessageBox.Show("Сохранено");
@@ -91,6 +145,18 @@ namespace Autosalon
                     }                    
                 } 
             }
+        }
+
+        private void HelpAddButton_Click(object sender, EventArgs e)
+        {
+            HelpAddForm helpAddForm = new HelpAddForm();
+            helpAddForm.Show();
+        }
+
+        private void HelpDelButton_Click(object sender, EventArgs e)
+        {
+            HelpDelForm helpDelForm = new HelpDelForm();
+            helpDelForm.Show();
         }
     }
 }
