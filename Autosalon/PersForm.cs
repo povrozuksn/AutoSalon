@@ -15,6 +15,7 @@ namespace Autosalon
     public partial class PersForm : Form
     {
         Car car;
+        string car_id;
         public PersForm(Car _car)
         {
             InitializeComponent();
@@ -27,11 +28,11 @@ namespace Autosalon
             kppLabel.Text = car.kpp;
             priceLabel.Text = car.price.ToString();
             pictureBox1.Image = car.pic.Image;
-            try
-            {
-                textBox1.Text = SQLClass.mySelect("SELECT opis FROM cars WHERE name = '" + car.name + "'")[0];
-            }
-            catch (Exception){ }
+
+            List<string> car_list = SQLClass.mySelect("SELECT id, opis FROM cars WHERE name = '" + car.name + "'");
+
+            car_id = car_list[0];
+            textBox1.Text = car_list[1];
             SelectedButton.Visible = false;
             if(MainForm.nameUser != "")
             {
@@ -49,6 +50,12 @@ namespace Autosalon
             {
                 SelectedForm.cars_selected.Add(car, 1);
             }
+        }
+
+        private void ComplectButton_Click(object sender, EventArgs e)
+        {
+            ComplectForm complectForm = new ComplectForm(car_id);
+            complectForm.ShowDialog();
         }
     }
 }

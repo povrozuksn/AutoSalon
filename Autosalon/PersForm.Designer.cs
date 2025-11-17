@@ -39,6 +39,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.SelectedButton = new System.Windows.Forms.Button();
+            this.ComplectButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -143,11 +144,22 @@
             this.SelectedButton.UseVisualStyleBackColor = true;
             this.SelectedButton.Click += new System.EventHandler(this.SelectedButton_Click);
             // 
+            // ComplectButton
+            // 
+            this.ComplectButton.Location = new System.Drawing.Point(428, 440);
+            this.ComplectButton.Name = "ComplectButton";
+            this.ComplectButton.Size = new System.Drawing.Size(194, 38);
+            this.ComplectButton.TabIndex = 11;
+            this.ComplectButton.Text = "Комплектующие";
+            this.ComplectButton.UseVisualStyleBackColor = true;
+            this.ComplectButton.Click += new System.EventHandler(this.ComplectButton_Click);
+            // 
             // PersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(980, 490);
+            this.Controls.Add(this.ComplectButton);
             this.Controls.Add(this.SelectedButton);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.priceLabel);
@@ -182,5 +194,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button SelectedButton;
+        private System.Windows.Forms.Button ComplectButton;
     }
 }

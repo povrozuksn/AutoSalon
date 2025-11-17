@@ -87,6 +87,12 @@
     <Compile Include="AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComplectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComplectForm.Designer.cs">
+      <DependentUpon>ComplectForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="HelpAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     <Compile Include="SQLClass.cs" />
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComplectForm.resx">
+      <DependentUpon>ComplectForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HelpAddForm.resx">
       <DependentUpon>HelpAddForm.cs</DependentUpon>
