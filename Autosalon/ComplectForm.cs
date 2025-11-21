@@ -16,20 +16,33 @@ namespace Autosalon
         {
             InitializeComponent();
 
-            List<string> complect = SQLClass.mySelect("SELECT id, name, price FROM complect WHERE car_id = '" + car_id + "'");
+            nameCarLabel.Text = "Комплектующие для: " + SQLClass.mySelect("SELECT name FROM cars WHERE id = '" + car_id + "'")[0];
+            List<string> complect = SQLClass.mySelect("SELECT id, name, price, image FROM complect WHERE car_id = '" + car_id + "'");
             
             if(complect.Count>0)
             {
                 int y = 70;
-                for(int i=0; i<complect.Count; i+=3)
+                for(int i=0; i<complect.Count; i+=4)
                 {
+                    PictureBox pic = new PictureBox();
+                    pic.Location = new Point(30, y);
+                    pic.Size = new Size(50, 50);
+                    pic.SizeMode = PictureBoxSizeMode.Zoom;
+                    pic.BorderStyle = BorderStyle.FixedSingle;
+                    try
+                    {
+                        pic.Load("http://localhost/autosalon/image/" + complect[i+3]);
+                    }
+                    catch (Exception) { }
+                    Controls.Add(pic);
+
                     Label lbl = new Label();
-                    lbl.Location = new Point(30, y);
+                    lbl.Location = new Point(100, y+20);
                     lbl.Size = new Size(500, 20);
                     lbl.Text = complect[i+1] + " " + complect[i+2] + " руб.";
                     Controls.Add(lbl);
 
-                    y += 22;
+                    y += 52;
                 }
             }
         }
