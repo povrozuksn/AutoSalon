@@ -24,6 +24,7 @@ namespace Autosalon
                 int y = 70;
                 for(int i=0; i<complect.Count; i+=4)
                 {
+                    #region Картинка
                     PictureBox pic = new PictureBox();
                     pic.Location = new Point(30, y);
                     pic.Size = new Size(50, 50);
@@ -35,16 +36,37 @@ namespace Autosalon
                     }
                     catch (Exception) { }
                     Controls.Add(pic);
+                    #endregion
 
+                    #region Наименование
                     Label lbl = new Label();
                     lbl.Location = new Point(100, y+20);
                     lbl.Size = new Size(500, 20);
                     lbl.Text = complect[i+1] + " " + complect[i+2] + " руб.";
                     Controls.Add(lbl);
+                    #endregion
+
+                    #region Кнопка
+                    Button btn = new Button();
+                    btn.Location = new Point(650, y+15);
+                    btn.Size = new Size(100,30);
+                    btn.Text = "Подробнее";
+                    btn.Tag = complect[i];
+                    btn.Click += new EventHandler(Compl_Click);
+                    Controls.Add(btn);
+                    #endregion
 
                     y += 52;
                 }
             }
         }
+
+        private void Compl_Click(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+            ToolForm tool = new ToolForm(b.Tag.ToString());
+            tool.ShowDialog();
+        }
+
     }
 }
