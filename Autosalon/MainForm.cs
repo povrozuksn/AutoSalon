@@ -234,7 +234,7 @@ namespace Autosalon
 
         private void AdminPanelButton_Click(object sender, EventArgs e)
         {
-            AdminForm form = new AdminForm();
+            СhoiceForm form = new СhoiceForm();
             form.ShowDialog();
             ReRead();
         }
