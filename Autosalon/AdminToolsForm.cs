@@ -91,5 +91,19 @@ namespace Autosalon
                 textBox1.Text = "";
             }
         }
+
+        private void HelpAddToolButton_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            HelpAddForm helpAddForm = new HelpAddForm(button.Name.ToString());
+            helpAddForm.Show();
+        }
+
+        private void HelpDelToolButton_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            HelpDelForm helpDelForm = new HelpDelForm(button.Name.ToString());
+            helpDelForm.Show();
+        }
     }
 }

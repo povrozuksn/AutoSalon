@@ -12,10 +12,17 @@ namespace Autosalon
 {
     public partial class HelpDelForm : Form
     {
-        public HelpDelForm()
+        public HelpDelForm(string nameButton)
         {
             InitializeComponent();
-            textBox1.Text = System.IO.File.ReadAllText("HelpDel.txt");
+            if (nameButton == "HelpDelCarButton")
+            {
+                textBox1.Text = System.IO.File.ReadAllText("HelpDelCar.txt");
+            }
+            else if (nameButton == "HelpDelToolButton")
+            {
+                textBox1.Text = System.IO.File.ReadAllText("HelpDelTool.txt");
+            }
         }
     }
 }

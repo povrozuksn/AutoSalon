@@ -12,10 +12,17 @@ namespace Autosalon
 {
     public partial class HelpAddForm : Form
     {
-        public HelpAddForm()
+        public HelpAddForm(string nameButton)
         {
             InitializeComponent();
-            textBox1.Text = System.IO.File.ReadAllText("HelpAdd.txt");
+            if(nameButton == "HelpAddCarButton")
+            {
+                textBox1.Text = System.IO.File.ReadAllText("HelpAddCar.txt");
+            }
+            else if (nameButton == "HelpAddToolButton")
+            {
+                textBox1.Text = System.IO.File.ReadAllText("HelpAddTool.txt");
+            }
         }
     }
 }

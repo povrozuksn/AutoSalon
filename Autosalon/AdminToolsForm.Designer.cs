@@ -48,6 +48,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.DelComboBox1 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.HelpDelToolButton = new System.Windows.Forms.Button();
+            this.HelpAddToolButton = new System.Windows.Forms.Button();
             this.AddPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.DelPanel.SuspendLayout();
@@ -56,6 +58,7 @@
             // AddPanel
             // 
             this.AddPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.AddPanel.Controls.Add(this.HelpAddToolButton);
             this.AddPanel.Controls.Add(this.addButton);
             this.AddPanel.Controls.Add(this.opisTextBox);
             this.AddPanel.Controls.Add(this.loadpicButton);
@@ -75,7 +78,7 @@
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(814, 407);
+            this.addButton.Location = new System.Drawing.Point(824, 352);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(224, 42);
             this.addButton.TabIndex = 10;
@@ -172,6 +175,7 @@
             // DelPanel
             // 
             this.DelPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.DelPanel.Controls.Add(this.HelpDelToolButton);
             this.DelPanel.Controls.Add(this.DelButton);
             this.DelPanel.Controls.Add(this.label8);
             this.DelPanel.Controls.Add(this.textBox1);
@@ -245,6 +249,26 @@
             this.label7.TabIndex = 7;
             this.label7.Text = "Выберите комплект для удаления";
             // 
+            // HelpDelToolButton
+            // 
+            this.HelpDelToolButton.Location = new System.Drawing.Point(1012, 11);
+            this.HelpDelToolButton.Name = "HelpDelToolButton";
+            this.HelpDelToolButton.Size = new System.Drawing.Size(36, 34);
+            this.HelpDelToolButton.TabIndex = 24;
+            this.HelpDelToolButton.Text = "?";
+            this.HelpDelToolButton.UseVisualStyleBackColor = true;
+            this.HelpDelToolButton.Click += new System.EventHandler(this.HelpDelToolButton_Click);
+            // 
+            // HelpAddToolButton
+            // 
+            this.HelpAddToolButton.Location = new System.Drawing.Point(1012, 412);
+            this.HelpAddToolButton.Name = "HelpAddToolButton";
+            this.HelpAddToolButton.Size = new System.Drawing.Size(36, 34);
+            this.HelpAddToolButton.TabIndex = 23;
+            this.HelpAddToolButton.Text = "?";
+            this.HelpAddToolButton.UseVisualStyleBackColor = true;
+            this.HelpAddToolButton.Click += new System.EventHandler(this.HelpAddToolButton_Click);
+            // 
             // AdminToolsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
@@ -287,5 +311,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox DelComboBox1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button HelpAddToolButton;
+        private System.Windows.Forms.Button HelpDelToolButton;
     }
 }

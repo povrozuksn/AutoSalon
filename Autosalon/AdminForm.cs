@@ -149,13 +149,15 @@ namespace Autosalon
 
         private void HelpAddButton_Click(object sender, EventArgs e)
         {
-            HelpAddForm helpAddForm = new HelpAddForm();
+            Button button = (Button)sender;
+            HelpAddForm helpAddForm = new HelpAddForm(button.Name.ToString());
             helpAddForm.Show();
         }
 
         private void HelpDelButton_Click(object sender, EventArgs e)
         {
-            HelpDelForm helpDelForm = new HelpDelForm();
+            Button button = (Button)sender;
+            HelpDelForm helpDelForm = new HelpDelForm(button.Name.ToString());
             helpDelForm.Show();
         }
     }

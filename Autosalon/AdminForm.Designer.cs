@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.AddPanel = new System.Windows.Forms.Panel();
+            this.HelpAddCarButton = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -49,6 +50,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.DelPanel = new System.Windows.Forms.Panel();
+            this.HelpDelCarButton = new System.Windows.Forms.Button();
             this.DelButton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -56,8 +58,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.HelpAddButton = new System.Windows.Forms.Button();
-            this.HelpDelButton = new System.Windows.Forms.Button();
             this.AddPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.DelPanel.SuspendLayout();
@@ -66,7 +66,7 @@
             // AddPanel
             // 
             this.AddPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.AddPanel.Controls.Add(this.HelpAddButton);
+            this.AddPanel.Controls.Add(this.HelpAddCarButton);
             this.AddPanel.Controls.Add(this.label14);
             this.AddPanel.Controls.Add(this.label13);
             this.AddPanel.Controls.Add(this.label12);
@@ -91,6 +91,16 @@
             this.AddPanel.Name = "AddPanel";
             this.AddPanel.Size = new System.Drawing.Size(1169, 505);
             this.AddPanel.TabIndex = 0;
+            // 
+            // HelpAddCarButton
+            // 
+            this.HelpAddCarButton.Location = new System.Drawing.Point(1120, 12);
+            this.HelpAddCarButton.Name = "HelpAddCarButton";
+            this.HelpAddCarButton.Size = new System.Drawing.Size(36, 34);
+            this.HelpAddCarButton.TabIndex = 21;
+            this.HelpAddCarButton.Text = "?";
+            this.HelpAddCarButton.UseVisualStyleBackColor = true;
+            this.HelpAddCarButton.Click += new System.EventHandler(this.HelpAddButton_Click);
             // 
             // label14
             // 
@@ -301,7 +311,7 @@
             // DelPanel
             // 
             this.DelPanel.BackColor = System.Drawing.Color.Silver;
-            this.DelPanel.Controls.Add(this.HelpDelButton);
+            this.DelPanel.Controls.Add(this.HelpDelCarButton);
             this.DelPanel.Controls.Add(this.DelButton);
             this.DelPanel.Controls.Add(this.label8);
             this.DelPanel.Controls.Add(this.textBox1);
@@ -313,6 +323,16 @@
             this.DelPanel.Name = "DelPanel";
             this.DelPanel.Size = new System.Drawing.Size(1169, 131);
             this.DelPanel.TabIndex = 1;
+            // 
+            // HelpDelCarButton
+            // 
+            this.HelpDelCarButton.Location = new System.Drawing.Point(1120, 7);
+            this.HelpDelCarButton.Name = "HelpDelCarButton";
+            this.HelpDelCarButton.Size = new System.Drawing.Size(36, 34);
+            this.HelpDelCarButton.TabIndex = 22;
+            this.HelpDelCarButton.Text = "?";
+            this.HelpDelCarButton.UseVisualStyleBackColor = true;
+            this.HelpDelCarButton.Click += new System.EventHandler(this.HelpDelButton_Click);
             // 
             // DelButton
             // 
@@ -375,26 +395,6 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // HelpAddButton
-            // 
-            this.HelpAddButton.Location = new System.Drawing.Point(1120, 12);
-            this.HelpAddButton.Name = "HelpAddButton";
-            this.HelpAddButton.Size = new System.Drawing.Size(36, 34);
-            this.HelpAddButton.TabIndex = 21;
-            this.HelpAddButton.Text = "?";
-            this.HelpAddButton.UseVisualStyleBackColor = true;
-            this.HelpAddButton.Click += new System.EventHandler(this.HelpAddButton_Click);
-            // 
-            // HelpDelButton
-            // 
-            this.HelpDelButton.Location = new System.Drawing.Point(1120, 7);
-            this.HelpDelButton.Name = "HelpDelButton";
-            this.HelpDelButton.Size = new System.Drawing.Size(36, 34);
-            this.HelpDelButton.TabIndex = 22;
-            this.HelpDelButton.Text = "?";
-            this.HelpDelButton.UseVisualStyleBackColor = true;
-            this.HelpDelButton.Click += new System.EventHandler(this.HelpDelButton_Click);
-            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
@@ -445,7 +445,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Button HelpAddButton;
-        private System.Windows.Forms.Button HelpDelButton;
+        private System.Windows.Forms.Button HelpAddCarButton;
+        private System.Windows.Forms.Button HelpDelCarButton;
     }
 }
