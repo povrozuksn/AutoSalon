@@ -28,5 +28,11 @@ namespace Autosalon
             AdminToolsForm toolsForm = new AdminToolsForm();
             toolsForm.ShowDialog();
         }
+
+        private void InfoButton_Click(object sender, EventArgs e)
+        {
+            InfoForm infoForm = new InfoForm();
+            infoForm.ShowDialog();
+        }
     }
 }

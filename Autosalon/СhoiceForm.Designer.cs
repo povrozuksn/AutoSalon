@@ -31,6 +31,7 @@
             this.CarButton = new System.Windows.Forms.Button();
             this.ToolsButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.InfoButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CarButton
@@ -62,16 +63,27 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Выберите вариант внесения изменений";
             // 
+            // InfoButton
+            // 
+            this.InfoButton.Location = new System.Drawing.Point(62, 248);
+            this.InfoButton.Name = "InfoButton";
+            this.InfoButton.Size = new System.Drawing.Size(236, 56);
+            this.InfoButton.TabIndex = 3;
+            this.InfoButton.Text = "Сводная информация по БД";
+            this.InfoButton.UseVisualStyleBackColor = true;
+            this.InfoButton.Click += new System.EventHandler(this.InfoButton_Click);
+            // 
             // СhoiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(378, 352);
+            this.Controls.Add(this.InfoButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ToolsButton);
             this.Controls.Add(this.CarButton);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "СhoiceForm";
             this.Text = "СhoiceForm";
             this.ResumeLayout(false);
@@ -84,5 +96,6 @@
         private System.Windows.Forms.Button CarButton;
         private System.Windows.Forms.Button ToolsButton;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button InfoButton;
     }
 }
