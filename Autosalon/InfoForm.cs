@@ -59,13 +59,14 @@ namespace Autosalon
                 {
                     Label lbl_id = new Label();
                     lbl_id.Location = new Point(20, y);
-                    lbl_id.Size = new Size(30, 15);
+                    lbl_id.Size = new Size(30, 20);
                     lbl_id.Text = list[i];
+                    lbl_id.Tag = list[i];
                     InfoPanel.Controls.Add(lbl_id);
 
                     Label lbl_name = new Label();
                     lbl_name.Location = new Point(55, y);
-                    lbl_name.Size = new Size(200, 15);
+                    lbl_name.Size = new Size(200, 20);
                     lbl_name.Text = list[i + 1];
                     InfoPanel.Controls.Add(lbl_name);
 
@@ -77,7 +78,15 @@ namespace Autosalon
                     lbl_car.Text = car;
                     InfoPanel.Controls.Add(lbl_car);
 
-                    y += 20;
+                    Button btn_delete = new Button();
+                    btn_delete.Location = new Point(500, y);
+                    btn_delete.Size = new Size(100, 25);
+                    btn_delete.Font = new Font("Microsoft Sans Serif", 7);
+                    btn_delete.Text = "Удалить";
+                    btn_delete.Click += new EventHandler(DeleteComplet);
+                    InfoPanel.Controls.Add(btn_delete);
+
+                    y += 30;
                 }
             }
 
@@ -89,23 +98,32 @@ namespace Autosalon
                 {
                     Label lbl_id = new Label();
                     lbl_id.Location = new Point(20, y);
-                    lbl_id.Size = new Size(30, 15);
+                    lbl_id.Size = new Size(30, 20);
                     lbl_id.Text = list[i];
+                    lbl_id.Tag = list[i];
                     InfoPanel.Controls.Add(lbl_id);
 
                     Label lbl_name = new Label();
                     lbl_name.Location = new Point(55, y);
-                    lbl_name.Size = new Size(200, 15);
+                    lbl_name.Size = new Size(200, 20);
                     lbl_name.Text = list[i + 1];
                     InfoPanel.Controls.Add(lbl_name);
 
                     Label lbl_family = new Label();
                     lbl_family.Location = new Point(260, y);
-                    lbl_family.Size = new Size(200, 15);
+                    lbl_family.Size = new Size(200, 20);
                     lbl_family.Text = list[i + 2];
                     InfoPanel.Controls.Add(lbl_family);
 
-                    y += 20;
+                    Button btn_delete = new Button();
+                    btn_delete.Location = new Point(500, y);
+                    btn_delete.Size = new Size(100, 25);
+                    btn_delete.Font = new Font("Microsoft Sans Serif", 7);
+                    btn_delete.Text = "Удалить";
+                    btn_delete.Click += new EventHandler(DeleteUser);
+                    InfoPanel.Controls.Add(btn_delete);
+
+                    y += 30;
                 }
             }
         }
@@ -121,6 +139,39 @@ namespace Autosalon
                 {
                     SQLClass.myUpdate("DELETE FROM cars WHERE id = '" + ctrl.Tag + "'");
                     MessageBox.Show("Удалено");
+                    infoComboBox_SelectedIndexChanged(sender, e);
+                }
+            }
+        }
+
+        private void DeleteComplet(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            int y = btn.Location.Y;
+
+            foreach (Control ctrl in InfoPanel.Controls)
+            {
+                if (ctrl.Location == new Point(20, y))
+                {
+                    SQLClass.myUpdate("DELETE FROM complect WHERE id = '" + ctrl.Tag + "'");
+                    MessageBox.Show("Удалено");
+                    infoComboBox_SelectedIndexChanged(sender, e);
+                }
+            }
+        }
+
+        private void DeleteUser(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            int y = btn.Location.Y;
+
+            foreach (Control ctrl in InfoPanel.Controls)
+            {
+                if (ctrl.Location == new Point(20, y))
+                {
+                    SQLClass.myUpdate("DELETE FROM users WHERE id = '" + ctrl.Tag + "'");
+                    MessageBox.Show("Удалено");
+                    infoComboBox_SelectedIndexChanged(sender, e);
                 }
             }
         }
