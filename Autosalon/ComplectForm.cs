@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Autosalon
 {
-    public partial class ComplectForm : Form
+    public partial class ComplectForm : UserControl
     {
         public ComplectForm(string car_id)
         {
@@ -65,7 +65,9 @@ namespace Autosalon
         {
             Button b = (Button)sender;
             ToolForm tool = new ToolForm(b.Tag.ToString());
-            tool.ShowDialog();
+            tool.Dock = DockStyle.Fill;
+            Controls.Clear();
+            Controls.Add(tool);
         }
 
     }

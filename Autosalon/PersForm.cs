@@ -12,7 +12,7 @@ using System.Xml.Linq;
 
 namespace Autosalon
 {
-    public partial class PersForm : Form
+    public partial class PersForm : UserControl
     {
         Car car;
         string car_id;
@@ -54,8 +54,11 @@ namespace Autosalon
 
         private void ComplectButton_Click(object sender, EventArgs e)
         {
-            ComplectForm complectForm = new ComplectForm(car_id);
-            complectForm.ShowDialog();
+            ComplectForm complectUC = new ComplectForm(car_id);
+            complectUC.Dock = DockStyle.Fill;
+            Controls.Clear();
+            Controls.Add(complectUC);
+
         }
     }
 }

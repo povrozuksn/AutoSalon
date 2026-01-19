@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Autosalon
 {
-    public partial class ToolForm : Form
+    public partial class ToolForm : UserControl
     {
         public ToolForm(string id)
         {

@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Автомобили");
             this.AuthPanel = new System.Windows.Forms.Panel();
+            this.SelectedButton = new System.Windows.Forms.Button();
             this.RegButton = new System.Windows.Forms.Button();
             this.AuthButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,9 +49,11 @@
             this.ModelTextBox = new System.Windows.Forms.TextBox();
             this.HideButton = new System.Windows.Forms.Button();
             this.InfoPanel = new System.Windows.Forms.Panel();
-            this.SelectedButton = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.AuthPanel.SuspendLayout();
             this.FilrtPanel.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // AuthPanel
@@ -69,6 +73,16 @@
             this.AuthPanel.Name = "AuthPanel";
             this.AuthPanel.Size = new System.Drawing.Size(1149, 59);
             this.AuthPanel.TabIndex = 0;
+            // 
+            // SelectedButton
+            // 
+            this.SelectedButton.Location = new System.Drawing.Point(975, 12);
+            this.SelectedButton.Name = "SelectedButton";
+            this.SelectedButton.Size = new System.Drawing.Size(162, 33);
+            this.SelectedButton.TabIndex = 8;
+            this.SelectedButton.Text = "В избранное";
+            this.SelectedButton.UseVisualStyleBackColor = true;
+            this.SelectedButton.Click += new System.EventHandler(this.SelectedButton_Click);
             // 
             // RegButton
             // 
@@ -245,38 +259,57 @@
             this.InfoPanel.AutoScroll = true;
             this.InfoPanel.BackColor = System.Drawing.Color.White;
             this.InfoPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.InfoPanel.Location = new System.Drawing.Point(0, 190);
+            this.InfoPanel.Location = new System.Drawing.Point(303, 3);
             this.InfoPanel.Name = "InfoPanel";
-            this.InfoPanel.Size = new System.Drawing.Size(1149, 429);
+            this.InfoPanel.Size = new System.Drawing.Size(843, 423);
             this.InfoPanel.TabIndex = 2;
             this.InfoPanel.Resize += new System.EventHandler(this.InfoPanel_Resize);
             // 
-            // SelectedButton
+            // tableLayoutPanel1
             // 
-            this.SelectedButton.Location = new System.Drawing.Point(975, 12);
-            this.SelectedButton.Name = "SelectedButton";
-            this.SelectedButton.Size = new System.Drawing.Size(162, 33);
-            this.SelectedButton.TabIndex = 8;
-            this.SelectedButton.Text = "В избранное";
-            this.SelectedButton.UseVisualStyleBackColor = true;
-            this.SelectedButton.Click += new System.EventHandler(this.SelectedButton_Click);
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.19669F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.80331F));
+            this.tableLayoutPanel1.Controls.Add(this.InfoPanel, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.treeView1, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 190);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1149, 429);
+            this.tableLayoutPanel1.TabIndex = 3;
+            // 
+            // treeView1
+            // 
+            this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeView1.Location = new System.Drawing.Point(3, 3);
+            this.treeView1.Name = "treeView1";
+            treeNode1.Name = "Узел0";
+            treeNode1.Text = "Автомобили";
+            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode1});
+            this.treeView1.Size = new System.Drawing.Size(294, 423);
+            this.treeView1.TabIndex = 3;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1149, 619);
-            this.Controls.Add(this.InfoPanel);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.FilrtPanel);
             this.Controls.Add(this.AuthPanel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Text = "Главная";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.AuthPanel.ResumeLayout(false);
             this.AuthPanel.PerformLayout();
             this.FilrtPanel.ResumeLayout(false);
             this.FilrtPanel.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -303,6 +336,8 @@
         private System.Windows.Forms.Label HelloLabel;
         private System.Windows.Forms.Button AdminPanelButton;
         private System.Windows.Forms.Button SelectedButton;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TreeView treeView1;
     }
 }
 

@@ -56,22 +56,13 @@ namespace Autosalon
             AdminPanelButton.Visible = false;
             SelectedButton.Visible = false;
 
-            ReRead();
+            CarsUC carsUC = new CarsUC();
+            carsUC.Dock = DockStyle.Fill;
+            InfoPanel.Controls.Clear();
+            InfoPanel.Controls.Add(carsUC);
+            
         }
-        void ReRead()
-        {
-            List<string> cars_list = SQLClass.mySelect("SELECT id, name, kuzov, kpp, price FROM cars");
-
-            cars.Clear();
-            for (int i=0; i<cars_list.Count; i+=5)
-            {
-                Car car = new Car(cars_list[i+1], cars_list[i+2], cars_list[i+3], Convert.ToInt32(cars_list[i+4]));
-                cars.Add(car);
-            }
-
-            ReDraw();
-        }
-
+       
         private void HideButton_Click(object sender, EventArgs e)
         {
             if (FilrtPanel.Height == HideButton.Height)
@@ -85,46 +76,7 @@ namespace Autosalon
                 HideButton.Text = "Раскрыть";
             }
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < cars.Count; i++)
-            {
-                if ( ((PictureBox)sender).Tag == cars[i].pic.Tag)
-                {
-                    PersForm pers = new PersForm(cars[i]);
-                    pers.ShowDialog();
-                }
-            }
-        }
-
-        void ReDraw()
-        {
-            InfoPanel.Controls.Clear();
-            int x = 20;
-            int y = 20;
-            for (int i = 0; i < cars.Count; i++)
-            {
-                cars[i].pic.Location = new Point(x, y);
-                cars[i].pic.Size = new Size(230, 180);
-                cars[i].pic.SizeMode = PictureBoxSizeMode.Zoom;
-                cars[i].pic.Click += new EventHandler(pictureBox1_Click);
-                InfoPanel.Controls.Add(cars[i].pic);
-
-                cars[i].lbl.Location = new Point(x, y + 180);
-                cars[i].lbl.Size = new Size(230, 30);
-                cars[i].lbl.TextAlign = ContentAlignment.MiddleCenter;
-                InfoPanel.Controls.Add(cars[i].lbl);
-
-                x += 250;
-                if (x + 230 > InfoPanel.Width)
-                {
-                    x = 20;
-                    y += 230;
-                }
-            }
-        }
-
+        
         private void InfoPanel_Resize(object sender, EventArgs e)
         {
             FindButton_Click(null, null);
@@ -236,13 +188,31 @@ namespace Autosalon
         {
             СhoiceForm form = new СhoiceForm();
             form.ShowDialog();
-            ReRead();
         }
 
         private void SelectedButton_Click(object sender, EventArgs e)
         {
             SelectedForm selected = new SelectedForm();
             selected.ShowDialog();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            List<string> cars_list = SQLClass.mySelect("SELECT id, name FROM cars");
+            for(int i=0; i<cars_list.Count; i+=2)
+            {
+                TreeNode node0 = new TreeNode(cars_list[i+1]);
+                node0.Tag = cars_list[i];
+                treeView1.Nodes[0].Nodes.Add(node0);
+
+                List<string> compl_list = SQLClass.mySelect("SELECT id, name FROM complect WHERE car_id = '" + cars_list[i] + "'");
+                for(int j = 0; j < compl_list.Count; j += 2)
+                {
+                    TreeNode node1 = new TreeNode(compl_list[j+1]);
+                    node1.Tag = compl_list[j];
+                    node0.Nodes.Add(node1);
+                }
+            }
         }
     }
 }

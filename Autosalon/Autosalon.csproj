@@ -93,8 +93,14 @@
     <Compile Include="AdminToolsForm.Designer.cs">
       <DependentUpon>AdminToolsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CarsUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CarsUC.Designer.cs">
+      <DependentUpon>CarsUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="ComplectForm.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ComplectForm.Designer.cs">
       <DependentUpon>ComplectForm.cs</DependentUpon>
@@ -124,7 +130,7 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PersForm.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="PersForm.Designer.cs">
       <DependentUpon>PersForm.cs</DependentUpon>
@@ -145,7 +151,7 @@
     </Compile>
     <Compile Include="SQLClass.cs" />
     <Compile Include="ToolForm.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ToolForm.Designer.cs">
       <DependentUpon>ToolForm.cs</DependentUpon>
@@ -161,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminToolsForm.resx">
       <DependentUpon>AdminToolsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CarsUC.resx">
+      <DependentUpon>CarsUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ComplectForm.resx">
       <DependentUpon>ComplectForm.cs</DependentUpon>
