@@ -65,7 +65,7 @@
             // 
             // ZakazButton
             // 
-            this.ZakazButton.Location = new System.Drawing.Point(318, 506);
+            this.ZakazButton.Location = new System.Drawing.Point(585, 447);
             this.ZakazButton.Name = "ZakazButton";
             this.ZakazButton.Size = new System.Drawing.Size(208, 41);
             this.ZakazButton.TabIndex = 3;
@@ -85,16 +85,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 613);
             this.Controls.Add(this.PriceLabel);
             this.Controls.Add(this.ZakazButton);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.NameLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ToolForm";
-            this.Text = "ToolForm";
+            this.Size = new System.Drawing.Size(819, 507);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

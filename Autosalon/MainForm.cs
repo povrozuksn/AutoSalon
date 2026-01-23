@@ -202,7 +202,7 @@ namespace Autosalon
             for(int i=0; i<cars_list.Count; i+=2)
             {
                 TreeNode node0 = new TreeNode(cars_list[i+1]);
-                node0.Tag = cars_list[i];
+                node0.Tag = cars_list[i+1];
                 treeView1.Nodes[0].Nodes.Add(node0);
 
                 List<string> compl_list = SQLClass.mySelect("SELECT id, name FROM complect WHERE car_id = '" + cars_list[i] + "'");
@@ -212,6 +212,37 @@ namespace Autosalon
                     node1.Tag = compl_list[j];
                     node0.Nodes.Add(node1);
                 }
+            }
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            if(e.Node.Level == 0)
+            {
+                CarsUC carsUC = new CarsUC();
+                carsUC.Dock = DockStyle.Fill;
+                InfoPanel.Controls.Clear();
+                InfoPanel.Controls.Add(carsUC);
+            }
+            else if(e.Node.Level == 1)
+            {
+                for (int i = 0; i < MainForm.cars.Count; i++)
+                {
+                    if (e.Node.Tag.ToString() == MainForm.cars[i].pic.Tag.ToString())
+                    {
+                        PersForm pers = new PersForm(MainForm.cars[i]);
+                        pers.Dock = DockStyle.Fill;
+                        InfoPanel.Controls.Clear();
+                        InfoPanel.Controls.Add(pers);
+                    }
+                }
+            }
+            else if(e.Node.Level == 2)
+            {
+                ToolForm toolUC = new ToolForm(e.Node.Tag.ToString());
+                toolUC.Dock = DockStyle.Fill;
+                InfoPanel.Controls.Clear();
+                InfoPanel.Controls.Add(toolUC);
             }
         }
     }

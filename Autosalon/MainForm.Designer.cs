@@ -291,6 +291,7 @@
             treeNode1});
             this.treeView1.Size = new System.Drawing.Size(294, 423);
             this.treeView1.TabIndex = 3;
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
             // MainForm
             // 

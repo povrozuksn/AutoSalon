@@ -131,12 +131,12 @@
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(527, 392);
+            this.textBox1.Size = new System.Drawing.Size(384, 392);
             this.textBox1.TabIndex = 9;
             // 
             // SelectedButton
             // 
-            this.SelectedButton.Location = new System.Drawing.Point(788, 440);
+            this.SelectedButton.Location = new System.Drawing.Point(645, 440);
             this.SelectedButton.Name = "SelectedButton";
             this.SelectedButton.Size = new System.Drawing.Size(167, 38);
             this.SelectedButton.TabIndex = 10;
@@ -158,7 +158,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(980, 490);
             this.Controls.Add(this.ComplectButton);
             this.Controls.Add(this.SelectedButton);
             this.Controls.Add(this.textBox1);
@@ -174,7 +173,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PersForm";
-            this.Text = "PersForm";
+            this.Size = new System.Drawing.Size(828, 490);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
