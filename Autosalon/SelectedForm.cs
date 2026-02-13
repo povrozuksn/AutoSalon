@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Autosalon
 {
-    public partial class SelectedForm : Form
+    public partial class SelectedForm : UserControl
     {
         public static Dictionary<Car, int> cars_selected = new Dictionary<Car, int>();
 
@@ -27,6 +27,7 @@ namespace Autosalon
             Controls.Clear();
             Controls.Add(UserLabel);
             Controls.Add(totalPriceLabel);
+            Controls.Add(saveButton);
 
             int x = 50; int y = 50;
             foreach (KeyValuePair<Car, int> car_select in cars_selected)
@@ -188,8 +189,13 @@ namespace Autosalon
 
         }
 
-
-
-
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            SQLClass.myUpdate("DELETE FROM zakaz WHERE user_id = '" + MainForm.user_id + "'");
+            foreach (KeyValuePair<Car, int> car_select in cars_selected)
+            {
+                SQLClass.myUpdate("INSERT INTO zakaz (user_id, name_obj, kol) VALUE ('" + MainForm.user_id + "', '" + car_select.Key.name + "', '" + car_select.Value + "')");
+            }                
+        }
     }
 }

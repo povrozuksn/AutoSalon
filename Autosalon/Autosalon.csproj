@@ -144,7 +144,7 @@
       <DependentUpon>RegForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SelectedForm.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="SelectedForm.Designer.cs">
       <DependentUpon>SelectedForm.cs</DependentUpon>

@@ -71,6 +71,7 @@
             this.ZakazButton.TabIndex = 3;
             this.ZakazButton.Text = "Заказать";
             this.ZakazButton.UseVisualStyleBackColor = true;
+            this.ZakazButton.Click += new System.EventHandler(this.ZakazButton_Click);
             // 
             // PriceLabel
             // 

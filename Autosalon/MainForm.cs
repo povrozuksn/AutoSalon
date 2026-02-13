@@ -45,6 +45,7 @@ namespace Autosalon
     {
         public static List<Car> cars = new List<Car>();
         public static string nameUser = "";
+        public static string user_id = "";
         bool isAdmin = false;
 
         public MainForm()
@@ -59,8 +60,7 @@ namespace Autosalon
             CarsUC carsUC = new CarsUC();
             carsUC.Dock = DockStyle.Fill;
             InfoPanel.Controls.Clear();
-            InfoPanel.Controls.Add(carsUC);
-            
+            InfoPanel.Controls.Add(carsUC);            
         }
        
         private void HideButton_Click(object sender, EventArgs e)
@@ -139,6 +139,7 @@ namespace Autosalon
                 if(LoginTextBox.Text == users_list[i+3] && PasTextBox.Text == users_list[i+4])
                 {
                     nameUser = users_list[i+1] + " " + users_list[i+2];
+                    user_id = users_list[i];
                     isAdmin = (users_list[i+5] == "1");
                     break;
                 }
@@ -159,6 +160,11 @@ namespace Autosalon
                 PasTextBox.Text = "";
                 nameUser = "";
                 isAdmin = false;
+                CarsUC carsUC = new CarsUC();
+                carsUC.Dock = DockStyle.Fill;
+                InfoPanel.Controls.Clear();
+                InfoPanel.Controls.Add(carsUC);
+                SelectedForm.cars_selected.Clear();
             }
             else
             {
@@ -193,7 +199,9 @@ namespace Autosalon
         private void SelectedButton_Click(object sender, EventArgs e)
         {
             SelectedForm selected = new SelectedForm();
-            selected.ShowDialog();
+            selected.Dock = DockStyle.Fill;
+            InfoPanel.Controls.Clear();
+            InfoPanel.Controls.Add(selected);
         }
 
         private void MainForm_Load(object sender, EventArgs e)

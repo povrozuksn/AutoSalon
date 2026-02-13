@@ -140,7 +140,7 @@
             this.SelectedButton.Name = "SelectedButton";
             this.SelectedButton.Size = new System.Drawing.Size(167, 38);
             this.SelectedButton.TabIndex = 10;
-            this.SelectedButton.Text = "Выбрать";
+            this.SelectedButton.Text = "Заказать";
             this.SelectedButton.UseVisualStyleBackColor = true;
             this.SelectedButton.Click += new System.EventHandler(this.SelectedButton_Click);
             // 
