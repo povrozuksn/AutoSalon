@@ -253,5 +253,11 @@ namespace Autosalon
                 InfoPanel.Controls.Add(toolUC);
             }
         }
+
+        private void FeedBackButton_Click(object sender, EventArgs e)
+        {
+            FeedBackForm feedBackForm = new FeedBackForm();
+            feedBackForm.ShowDialog();
+        }
     }
 }

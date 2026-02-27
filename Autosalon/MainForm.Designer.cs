@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Автомобили");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Автомобили");
             this.AuthPanel = new System.Windows.Forms.Panel();
             this.SelectedButton = new System.Windows.Forms.Button();
             this.RegButton = new System.Windows.Forms.Button();
@@ -51,6 +51,7 @@
             this.InfoPanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.treeView1 = new System.Windows.Forms.TreeView();
+            this.FeedBackButton = new System.Windows.Forms.Button();
             this.AuthPanel.SuspendLayout();
             this.FilrtPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -159,6 +160,7 @@
             // FilrtPanel
             // 
             this.FilrtPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.FilrtPanel.Controls.Add(this.FeedBackButton);
             this.FilrtPanel.Controls.Add(this.FindButton);
             this.FilrtPanel.Controls.Add(this.KPPComboBox);
             this.FilrtPanel.Controls.Add(this.label6);
@@ -285,13 +287,23 @@
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeView1.Location = new System.Drawing.Point(3, 3);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "Узел0";
-            treeNode1.Text = "Автомобили";
+            treeNode2.Name = "Узел0";
+            treeNode2.Text = "Автомобили";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1});
+            treeNode2});
             this.treeView1.Size = new System.Drawing.Size(294, 423);
             this.treeView1.TabIndex = 3;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
+            // 
+            // FeedBackButton
+            // 
+            this.FeedBackButton.Location = new System.Drawing.Point(975, 0);
+            this.FeedBackButton.Name = "FeedBackButton";
+            this.FeedBackButton.Size = new System.Drawing.Size(171, 33);
+            this.FeedBackButton.TabIndex = 8;
+            this.FeedBackButton.Text = "Обратная связь";
+            this.FeedBackButton.UseVisualStyleBackColor = true;
+            this.FeedBackButton.Click += new System.EventHandler(this.FeedBackButton_Click);
             // 
             // MainForm
             // 
@@ -339,6 +351,7 @@
         private System.Windows.Forms.Button SelectedButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.Button FeedBackButton;
     }
 }
 
