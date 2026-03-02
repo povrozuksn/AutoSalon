@@ -31,6 +31,7 @@
             this.UserLabel = new System.Windows.Forms.Label();
             this.totalPriceLabel = new System.Windows.Forms.Label();
             this.saveButton = new System.Windows.Forms.Button();
+            this.SendMailButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // UserLabel
@@ -53,19 +54,30 @@
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(801, 9);
+            this.saveButton.Location = new System.Drawing.Point(735, 9);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(186, 32);
+            this.saveButton.Size = new System.Drawing.Size(122, 32);
             this.saveButton.TabIndex = 2;
             this.saveButton.Text = "Сохранить";
             this.saveButton.UseVisualStyleBackColor = true;
             this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            // 
+            // SendMailButton
+            // 
+            this.SendMailButton.Location = new System.Drawing.Point(875, 9);
+            this.SendMailButton.Name = "SendMailButton";
+            this.SendMailButton.Size = new System.Drawing.Size(112, 31);
+            this.SendMailButton.TabIndex = 3;
+            this.SendMailButton.Text = "по Email";
+            this.SendMailButton.UseVisualStyleBackColor = true;
+            this.SendMailButton.Click += new System.EventHandler(this.SendMailButton_Click);
             // 
             // SelectedForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.Controls.Add(this.SendMailButton);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.totalPriceLabel);
             this.Controls.Add(this.UserLabel);
@@ -83,5 +95,6 @@
         private System.Windows.Forms.Label UserLabel;
         private System.Windows.Forms.Label totalPriceLabel;
         private System.Windows.Forms.Button saveButton;
+        private System.Windows.Forms.Button SendMailButton;
     }
 }

@@ -93,6 +93,12 @@
     <Compile Include="AdminToolsForm.Designer.cs">
       <DependentUpon>AdminToolsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdressForm.Designer.cs">
+      <DependentUpon>AdressForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CarsUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminToolsForm.resx">
       <DependentUpon>AdminToolsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdressForm.resx">
+      <DependentUpon>AdressForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CarsUC.resx">
       <DependentUpon>CarsUC.cs</DependentUpon>

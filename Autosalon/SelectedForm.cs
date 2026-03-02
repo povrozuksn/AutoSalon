@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.Mail;
 
 namespace Autosalon
 {
@@ -28,6 +30,7 @@ namespace Autosalon
             Controls.Add(UserLabel);
             Controls.Add(totalPriceLabel);
             Controls.Add(saveButton);
+            Controls.Add(SendMailButton);
 
             int x = 50; int y = 50;
             foreach (KeyValuePair<Car, int> car_select in cars_selected)
@@ -196,6 +199,12 @@ namespace Autosalon
             {
                 SQLClass.myUpdate("INSERT INTO zakaz (user_id, name_obj, kol) VALUE ('" + MainForm.user_id + "', '" + car_select.Key.name + "', '" + car_select.Value + "')");
             }                
+        }
+
+        private void SendMailButton_Click(object sender, EventArgs e)
+        {
+            AdressForm adressForm = new AdressForm();
+            adressForm.ShowDialog();
         }
     }
 }

@@ -37,7 +37,7 @@ namespace Autosalon
                 client.EnableSsl = true;
                 client.DeliveryMethod = SmtpDeliveryMethod.Network;
                 client.UseDefaultCredentials = false;
-                client.Credentials = new NetworkCredential(fromAddress.Address, "");
+                client.Credentials = new NetworkCredential(fromAddress.Address, "ukWmp3IPaNab1XBAUlPu");
                 client.Send(message);
             }
             MessageBox.Show("Сообщение отправлено");
