@@ -15,6 +15,7 @@ namespace Autosalon
         public ComplectForm(string car_id)
         {
             InitializeComponent();
+            DesignForm.ApplyDesign(this);
 
             nameCarLabel.Text = "Комплектующие для: " + SQLClass.mySelect("SELECT name FROM cars WHERE id = '" + car_id + "'")[0];
             List<string> complect = SQLClass.mySelect("SELECT id, name, price, image FROM complect WHERE car_id = '" + car_id + "'");

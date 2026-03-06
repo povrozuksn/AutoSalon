@@ -15,6 +15,7 @@ namespace Autosalon
         public RegForm()
         {
             InitializeComponent();
+            DesignForm.ApplyDesign(this);
         }
 
         private void RegButton_Click(object sender, EventArgs e)

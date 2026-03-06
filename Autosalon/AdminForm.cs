@@ -23,7 +23,8 @@ namespace Autosalon
         public AdminForm()
         {
             InitializeComponent();
-            for(int i=0; i<MainForm.cars.Count; i++)
+            
+            for (int i=0; i<MainForm.cars.Count; i++)
             {
                 DelComboBox1.Items.Add(MainForm.cars[i].name);
             }

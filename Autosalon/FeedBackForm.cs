@@ -17,6 +17,7 @@ namespace Autosalon
         public FeedBackForm()
         {
             InitializeComponent();
+            DesignForm.ApplyDesign(this);
         }
 
         private void SendButton_Click(object sender, EventArgs e)

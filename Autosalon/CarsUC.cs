@@ -15,8 +15,8 @@ namespace Autosalon
         public CarsUC()
         {
             InitializeComponent();
-
             ReRead();
+            DesignForm.ApplyDesign(this);
         }
 
         void ReRead()

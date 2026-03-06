@@ -19,6 +19,7 @@ namespace Autosalon
         public AdressForm()
         {
             InitializeComponent();
+            DesignForm.ApplyDesign(this);
         }
 
         private void SendButton_Click(object sender, EventArgs e)

@@ -19,6 +19,7 @@ namespace Autosalon
         public PersForm(Car _car)
         {
             InitializeComponent();
+            DesignForm.ApplyDesign(this);
 
             car = _car;
 

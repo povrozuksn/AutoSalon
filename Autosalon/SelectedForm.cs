@@ -19,6 +19,7 @@ namespace Autosalon
         public SelectedForm()
         {
             InitializeComponent();
+            DesignForm.ApplyDesign(this);
             UserLabel.Text = "Избранное пользователя: " + MainForm.nameUser;
 
             ReDraw();

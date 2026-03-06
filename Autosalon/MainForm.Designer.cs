@@ -40,6 +40,7 @@
             this.HelloLabel = new System.Windows.Forms.Label();
             this.AdminPanelButton = new System.Windows.Forms.Button();
             this.FilrtPanel = new System.Windows.Forms.Panel();
+            this.FeedBackButton = new System.Windows.Forms.Button();
             this.FindButton = new System.Windows.Forms.Button();
             this.KPPComboBox = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -51,7 +52,7 @@
             this.InfoPanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.FeedBackButton = new System.Windows.Forms.Button();
+            this.DesignButton = new System.Windows.Forms.Button();
             this.AuthPanel.SuspendLayout();
             this.FilrtPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -160,6 +161,7 @@
             // FilrtPanel
             // 
             this.FilrtPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.FilrtPanel.Controls.Add(this.DesignButton);
             this.FilrtPanel.Controls.Add(this.FeedBackButton);
             this.FilrtPanel.Controls.Add(this.FindButton);
             this.FilrtPanel.Controls.Add(this.KPPComboBox);
@@ -174,6 +176,16 @@
             this.FilrtPanel.Name = "FilrtPanel";
             this.FilrtPanel.Size = new System.Drawing.Size(1149, 131);
             this.FilrtPanel.TabIndex = 1;
+            // 
+            // FeedBackButton
+            // 
+            this.FeedBackButton.Location = new System.Drawing.Point(975, 0);
+            this.FeedBackButton.Name = "FeedBackButton";
+            this.FeedBackButton.Size = new System.Drawing.Size(171, 33);
+            this.FeedBackButton.TabIndex = 8;
+            this.FeedBackButton.Text = "Обратная связь";
+            this.FeedBackButton.UseVisualStyleBackColor = true;
+            this.FeedBackButton.Click += new System.EventHandler(this.FeedBackButton_Click);
             // 
             // FindButton
             // 
@@ -295,15 +307,15 @@
             this.treeView1.TabIndex = 3;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
-            // FeedBackButton
+            // DesignButton
             // 
-            this.FeedBackButton.Location = new System.Drawing.Point(975, 0);
-            this.FeedBackButton.Name = "FeedBackButton";
-            this.FeedBackButton.Size = new System.Drawing.Size(171, 33);
-            this.FeedBackButton.TabIndex = 8;
-            this.FeedBackButton.Text = "Обратная связь";
-            this.FeedBackButton.UseVisualStyleBackColor = true;
-            this.FeedBackButton.Click += new System.EventHandler(this.FeedBackButton_Click);
+            this.DesignButton.Location = new System.Drawing.Point(798, 0);
+            this.DesignButton.Name = "DesignButton";
+            this.DesignButton.Size = new System.Drawing.Size(171, 33);
+            this.DesignButton.TabIndex = 9;
+            this.DesignButton.Text = "Дизайн";
+            this.DesignButton.UseVisualStyleBackColor = true;
+            this.DesignButton.Click += new System.EventHandler(this.DesignButton_Click);
             // 
             // MainForm
             // 
@@ -352,6 +364,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.Button FeedBackButton;
+        private System.Windows.Forms.Button DesignButton;
     }
 }
 

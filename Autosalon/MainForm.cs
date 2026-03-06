@@ -221,6 +221,13 @@ namespace Autosalon
                     node0.Nodes.Add(node1);
                 }
             }
+
+
+            
+
+
+
+
         }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
@@ -258,6 +265,13 @@ namespace Autosalon
         {
             FeedBackForm feedBackForm = new FeedBackForm();
             feedBackForm.ShowDialog();
+        }
+
+        private void DesignButton_Click(object sender, EventArgs e)
+        {
+            DesignForm designForm = new DesignForm();
+            designForm.ShowDialog();
+            DesignForm.ApplyDesign(this);
         }
     }
 }

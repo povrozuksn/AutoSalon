@@ -18,6 +18,7 @@ namespace Autosalon
         public ToolForm(string id)
         {
             InitializeComponent();
+            DesignForm.ApplyDesign(this);
             List<string> list = SQLClass.mySelect("SELECT id, name, price, image, opis FROM complect WHERE id = '" + id + "'");
             Text = list[1];
             NameLabel.Text = list[1];
