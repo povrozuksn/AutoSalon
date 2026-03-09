@@ -33,6 +33,12 @@ namespace Autosalon
                 LABEL_FONT_COLOR = LabelfontDialog.Color;
 
                 ReApply();
+
+                SQLClass.myUpdate("DELETE FROM design WHERE type = '" + PrimerLabel.GetType() + "' AND parametr = 'FONT'");
+                SQLClass.myUpdate("DELETE FROM design WHERE type = '" + PrimerLabel.GetType() + "' AND parametr = 'FONT_COLOR'");
+
+                SQLClass.myUpdate("INSERT INTO design (type, parametr, value) VALUES ('" + PrimerLabel.GetType() + "', 'FONT', '" + LABEL_FONT.Name + ";" + LABEL_FONT.Size.ToString() + "')");
+                SQLClass.myUpdate("INSERT INTO design (type, parametr, value) VALUES ('" + PrimerLabel.GetType() + "', 'FONT_COLOR', '" + LABEL_FONT_COLOR.ToArgb() + "')");
             }
         }
 
@@ -56,6 +62,18 @@ namespace Autosalon
                     ApplyDesign(control);
                 }
             }
+        }
+
+        public static void ReadDesign()
+        {
+             
+            string font = SQLClass.mySelect("SELECT value FROM design WHERE type = 'System.Windows.Forms.Label' AND parametr = 'FONT'")[0];
+            string[] parts = font.Split(new char[] { ';' });
+            LABEL_FONT = new Font(new FontFamily(parts[0]), (float)Convert.ToDouble(parts[1]));
+
+            string color = SQLClass.mySelect("SELECT value FROM design WHERE type = 'System.Windows.Forms.Label' AND parametr = 'FONT_COLOR'")[0];
+            LABEL_FONT_COLOR = Color.FromArgb(Convert.ToInt32(color));
+                       
         }
     }
 }

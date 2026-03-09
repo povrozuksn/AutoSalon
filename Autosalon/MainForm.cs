@@ -60,7 +60,10 @@ namespace Autosalon
             CarsUC carsUC = new CarsUC();
             carsUC.Dock = DockStyle.Fill;
             InfoPanel.Controls.Clear();
-            InfoPanel.Controls.Add(carsUC);            
+            InfoPanel.Controls.Add(carsUC);
+
+            DesignForm.ReadDesign();
+            DesignForm.ApplyDesign(this);
         }
        
         private void HideButton_Click(object sender, EventArgs e)
@@ -221,13 +224,6 @@ namespace Autosalon
                     node0.Nodes.Add(node1);
                 }
             }
-
-
-            
-
-
-
-
         }
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
