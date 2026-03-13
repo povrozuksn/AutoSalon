@@ -144,6 +144,8 @@ namespace Autosalon
                     nameUser = users_list[i+1] + " " + users_list[i+2];
                     user_id = users_list[i];
                     isAdmin = (users_list[i+5] == "1");
+                    DesignForm.ReadDesign();
+                    DesignForm.ApplyDesign(this);
                     break;
                 }
             }
@@ -168,6 +170,8 @@ namespace Autosalon
                 InfoPanel.Controls.Clear();
                 InfoPanel.Controls.Add(carsUC);
                 SelectedForm.cars_selected.Clear();
+                DesignForm.ReadDesign();
+                DesignForm.ApplyDesign(this);
             }
             else
             {
