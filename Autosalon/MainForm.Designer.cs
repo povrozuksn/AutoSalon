@@ -40,6 +40,7 @@
             this.HelloLabel = new System.Windows.Forms.Label();
             this.AdminPanelButton = new System.Windows.Forms.Button();
             this.FilrtPanel = new System.Windows.Forms.Panel();
+            this.DesignButton = new System.Windows.Forms.Button();
             this.FeedBackButton = new System.Windows.Forms.Button();
             this.FindButton = new System.Windows.Forms.Button();
             this.KPPComboBox = new System.Windows.Forms.ComboBox();
@@ -52,7 +53,8 @@
             this.InfoPanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.DesignButton = new System.Windows.Forms.Button();
+            this.WeatherLabel = new System.Windows.Forms.Label();
+            this.ValutPanel = new System.Windows.Forms.Panel();
             this.AuthPanel.SuspendLayout();
             this.FilrtPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -161,6 +163,7 @@
             // FilrtPanel
             // 
             this.FilrtPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.FilrtPanel.Controls.Add(this.WeatherLabel);
             this.FilrtPanel.Controls.Add(this.DesignButton);
             this.FilrtPanel.Controls.Add(this.FeedBackButton);
             this.FilrtPanel.Controls.Add(this.FindButton);
@@ -176,6 +179,16 @@
             this.FilrtPanel.Name = "FilrtPanel";
             this.FilrtPanel.Size = new System.Drawing.Size(1149, 131);
             this.FilrtPanel.TabIndex = 1;
+            // 
+            // DesignButton
+            // 
+            this.DesignButton.Location = new System.Drawing.Point(798, 0);
+            this.DesignButton.Name = "DesignButton";
+            this.DesignButton.Size = new System.Drawing.Size(171, 33);
+            this.DesignButton.TabIndex = 9;
+            this.DesignButton.Text = "Дизайн";
+            this.DesignButton.UseVisualStyleBackColor = true;
+            this.DesignButton.Click += new System.EventHandler(this.DesignButton_Click);
             // 
             // FeedBackButton
             // 
@@ -275,7 +288,7 @@
             this.InfoPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InfoPanel.Location = new System.Drawing.Point(303, 3);
             this.InfoPanel.Name = "InfoPanel";
-            this.InfoPanel.Size = new System.Drawing.Size(843, 423);
+            this.InfoPanel.Size = new System.Drawing.Size(843, 481);
             this.InfoPanel.TabIndex = 2;
             this.InfoPanel.Resize += new System.EventHandler(this.InfoPanel_Resize);
             // 
@@ -291,7 +304,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1149, 429);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1149, 487);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // treeView1
@@ -303,25 +316,33 @@
             treeNode2.Text = "Автомобили";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode2});
-            this.treeView1.Size = new System.Drawing.Size(294, 423);
+            this.treeView1.Size = new System.Drawing.Size(294, 481);
             this.treeView1.TabIndex = 3;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
-            // DesignButton
+            // WeatherLabel
             // 
-            this.DesignButton.Location = new System.Drawing.Point(798, 0);
-            this.DesignButton.Name = "DesignButton";
-            this.DesignButton.Size = new System.Drawing.Size(171, 33);
-            this.DesignButton.TabIndex = 9;
-            this.DesignButton.Text = "Дизайн";
-            this.DesignButton.UseVisualStyleBackColor = true;
-            this.DesignButton.Click += new System.EventHandler(this.DesignButton_Click);
+            this.WeatherLabel.AutoSize = true;
+            this.WeatherLabel.Location = new System.Drawing.Point(405, 0);
+            this.WeatherLabel.Name = "WeatherLabel";
+            this.WeatherLabel.Size = new System.Drawing.Size(58, 22);
+            this.WeatherLabel.TabIndex = 10;
+            this.WeatherLabel.Text = "label1";
+            // 
+            // ValutPanel
+            // 
+            this.ValutPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ValutPanel.Location = new System.Drawing.Point(0, 630);
+            this.ValutPanel.Name = "ValutPanel";
+            this.ValutPanel.Size = new System.Drawing.Size(1149, 47);
+            this.ValutPanel.TabIndex = 4;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1149, 619);
+            this.ClientSize = new System.Drawing.Size(1149, 677);
+            this.Controls.Add(this.ValutPanel);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.FilrtPanel);
             this.Controls.Add(this.AuthPanel);
@@ -365,6 +386,8 @@
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.Button FeedBackButton;
         private System.Windows.Forms.Button DesignButton;
+        private System.Windows.Forms.Label WeatherLabel;
+        private System.Windows.Forms.Panel ValutPanel;
     }
 }
 

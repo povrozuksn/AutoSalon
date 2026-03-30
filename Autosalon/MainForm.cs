@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.IO;
 using MySql.Data.MySqlClient;
 using System.Data.Common;
+using System.Web;
 
 namespace Autosalon
 {
@@ -64,6 +65,14 @@ namespace Autosalon
 
             DesignForm.ReadDesign();
             DesignForm.ApplyDesign(this);
+
+            APIClass.Weather();
+            string sing = "";
+            if (APIClass.temp > 0)
+            {
+                sing = "+";
+            }
+            WeatherLabel.Text = "Температура: " + sing + Math.Round(APIClass.temp) + "°С";
         }
        
         private void HideButton_Click(object sender, EventArgs e)
