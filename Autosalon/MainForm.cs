@@ -48,6 +48,8 @@ namespace Autosalon
         public static string nameUser = "";
         public static string user_id = "";
         bool isAdmin = false;
+        public static string OldVal = "Рубли";
+        public static string NewVal = "Рубли";
 
         public MainForm()
         {
@@ -73,6 +75,11 @@ namespace Autosalon
                 sing = "+";
             }
             WeatherLabel.Text = "Температура: " + sing + Math.Round(APIClass.temp) + "°С";
+
+            APIClass.Vals();
+            ValsLabel.Text = "Курсы валют: " + "$: " + Math.Round(APIClass.vals["Доллары"], 2).ToString() + "; €: " + Math.Round(APIClass.vals["Евро"], 2).ToString() + "; ¥: " + Math.Round(APIClass.vals["Юани"], 2).ToString();
+            ValsComboBox.SelectedIndex = 0;
+        
         }
        
         private void HideButton_Click(object sender, EventArgs e)
@@ -281,6 +288,23 @@ namespace Autosalon
             DesignForm designForm = new DesignForm();
             designForm.ShowDialog();
             DesignForm.ApplyDesign(this);
+        }
+
+        private void ValsComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            OldVal = NewVal;
+            NewVal = ValsComboBox.Text;
+
+            double coef = APIClass.vals[OldVal] / APIClass.vals[NewVal];
+
+            var pricelbl = Controls.Find("priceLabel", true);
+
+            foreach(Label lbl in pricelbl)
+            {
+                double price = Convert.ToDouble(lbl.Text);
+                price = Math.Round((price * coef), 2);
+                lbl.Text = price.ToString();
+            }
         }
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Автомобили");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Автомобили");
             this.AuthPanel = new System.Windows.Forms.Panel();
             this.SelectedButton = new System.Windows.Forms.Button();
             this.RegButton = new System.Windows.Forms.Button();
@@ -40,6 +40,7 @@
             this.HelloLabel = new System.Windows.Forms.Label();
             this.AdminPanelButton = new System.Windows.Forms.Button();
             this.FilrtPanel = new System.Windows.Forms.Panel();
+            this.WeatherLabel = new System.Windows.Forms.Label();
             this.DesignButton = new System.Windows.Forms.Button();
             this.FeedBackButton = new System.Windows.Forms.Button();
             this.FindButton = new System.Windows.Forms.Button();
@@ -53,11 +54,13 @@
             this.InfoPanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.WeatherLabel = new System.Windows.Forms.Label();
             this.ValutPanel = new System.Windows.Forms.Panel();
+            this.ValsLabel = new System.Windows.Forms.Label();
+            this.ValsComboBox = new System.Windows.Forms.ComboBox();
             this.AuthPanel.SuspendLayout();
             this.FilrtPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.ValutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // AuthPanel
@@ -179,6 +182,15 @@
             this.FilrtPanel.Name = "FilrtPanel";
             this.FilrtPanel.Size = new System.Drawing.Size(1149, 131);
             this.FilrtPanel.TabIndex = 1;
+            // 
+            // WeatherLabel
+            // 
+            this.WeatherLabel.AutoSize = true;
+            this.WeatherLabel.Location = new System.Drawing.Point(405, 0);
+            this.WeatherLabel.Name = "WeatherLabel";
+            this.WeatherLabel.Size = new System.Drawing.Size(58, 22);
+            this.WeatherLabel.TabIndex = 10;
+            this.WeatherLabel.Text = "label1";
             // 
             // DesignButton
             // 
@@ -312,30 +324,46 @@
             this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeView1.Location = new System.Drawing.Point(3, 3);
             this.treeView1.Name = "treeView1";
-            treeNode2.Name = "Узел0";
-            treeNode2.Text = "Автомобили";
+            treeNode3.Name = "Узел0";
+            treeNode3.Text = "Автомобили";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode2});
+            treeNode3});
             this.treeView1.Size = new System.Drawing.Size(294, 481);
             this.treeView1.TabIndex = 3;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
-            // WeatherLabel
-            // 
-            this.WeatherLabel.AutoSize = true;
-            this.WeatherLabel.Location = new System.Drawing.Point(405, 0);
-            this.WeatherLabel.Name = "WeatherLabel";
-            this.WeatherLabel.Size = new System.Drawing.Size(58, 22);
-            this.WeatherLabel.TabIndex = 10;
-            this.WeatherLabel.Text = "label1";
-            // 
             // ValutPanel
             // 
+            this.ValutPanel.Controls.Add(this.ValsComboBox);
+            this.ValutPanel.Controls.Add(this.ValsLabel);
             this.ValutPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ValutPanel.Location = new System.Drawing.Point(0, 630);
             this.ValutPanel.Name = "ValutPanel";
             this.ValutPanel.Size = new System.Drawing.Size(1149, 47);
             this.ValutPanel.TabIndex = 4;
+            // 
+            // ValsLabel
+            // 
+            this.ValsLabel.AutoSize = true;
+            this.ValsLabel.Location = new System.Drawing.Point(17, 15);
+            this.ValsLabel.Name = "ValsLabel";
+            this.ValsLabel.Size = new System.Drawing.Size(58, 22);
+            this.ValsLabel.TabIndex = 0;
+            this.ValsLabel.Text = "label1";
+            // 
+            // ValsComboBox
+            // 
+            this.ValsComboBox.FormattingEnabled = true;
+            this.ValsComboBox.Items.AddRange(new object[] {
+            "Рубли",
+            "Доллары",
+            "Евро",
+            "Юани"});
+            this.ValsComboBox.Location = new System.Drawing.Point(965, 12);
+            this.ValsComboBox.Name = "ValsComboBox";
+            this.ValsComboBox.Size = new System.Drawing.Size(121, 30);
+            this.ValsComboBox.TabIndex = 1;
+            this.ValsComboBox.SelectedIndexChanged += new System.EventHandler(this.ValsComboBox_SelectedIndexChanged);
             // 
             // MainForm
             // 
@@ -356,6 +384,8 @@
             this.FilrtPanel.ResumeLayout(false);
             this.FilrtPanel.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.ValutPanel.ResumeLayout(false);
+            this.ValutPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -388,6 +418,8 @@
         private System.Windows.Forms.Button DesignButton;
         private System.Windows.Forms.Label WeatherLabel;
         private System.Windows.Forms.Panel ValutPanel;
+        private System.Windows.Forms.Label ValsLabel;
+        private System.Windows.Forms.ComboBox ValsComboBox;
     }
 }
 

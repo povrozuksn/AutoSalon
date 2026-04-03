@@ -32,7 +32,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.ZakazButton = new System.Windows.Forms.Button();
-            this.PriceLabel = new System.Windows.Forms.Label();
+            this.priceLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,20 +74,30 @@
             this.ZakazButton.UseVisualStyleBackColor = true;
             this.ZakazButton.Click += new System.EventHandler(this.ZakazButton_Click);
             // 
-            // PriceLabel
+            // priceLabel
             // 
-            this.PriceLabel.AutoSize = true;
-            this.PriceLabel.Location = new System.Drawing.Point(26, 54);
-            this.PriceLabel.Name = "PriceLabel";
-            this.PriceLabel.Size = new System.Drawing.Size(58, 22);
-            this.PriceLabel.TabIndex = 4;
-            this.PriceLabel.Text = "label1";
+            this.priceLabel.AutoSize = true;
+            this.priceLabel.Location = new System.Drawing.Point(116, 54);
+            this.priceLabel.Name = "priceLabel";
+            this.priceLabel.Size = new System.Drawing.Size(58, 22);
+            this.priceLabel.TabIndex = 4;
+            this.priceLabel.Text = "label1";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(26, 54);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(58, 22);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Цена:";
             // 
             // ToolForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.PriceLabel);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.priceLabel);
             this.Controls.Add(this.ZakazButton);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
@@ -107,6 +118,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button ZakazButton;
-        private System.Windows.Forms.Label PriceLabel;
+        private System.Windows.Forms.Label priceLabel;
+        private System.Windows.Forms.Label label1;
     }
 }

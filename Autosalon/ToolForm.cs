@@ -23,7 +23,7 @@ namespace Autosalon
             Text = list[1];
             NameLabel.Text = list[1];
             name_tool = list[1];
-            PriceLabel.Text = "Цена: " + list[2] + " руб.";
+            priceLabel.Text = list[2];
             price_tool = list[2];
             try
             {
