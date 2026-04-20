@@ -38,7 +38,9 @@ namespace Autosalon
             if(MainForm.nameUser != "")
             {
                 SelectedButton.Visible = true;
-            }            
+            } 
+            addOpisButton.Visible = MainForm.isAdmin;
+            textBox1.ReadOnly = !MainForm.isAdmin;
         }
 
         private void SelectedButton_Click(object sender, EventArgs e)
@@ -60,6 +62,12 @@ namespace Autosalon
             Controls.Clear();
             Controls.Add(complectUC);
 
+        }
+
+        private void addOpisButton_Click(object sender, EventArgs e)
+        {
+            SQLClass.myUpdate("UPDATE cars SET opis = '" + textBox1.Text + "' WHERE id = '" + car_id + "'");
+            MessageBox.Show("Сохранено");
         }
     }
 }

@@ -40,6 +40,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.SelectedButton = new System.Windows.Forms.Button();
             this.ComplectButton = new System.Windows.Forms.Button();
+            this.addOpisButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,11 +128,11 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(428, 37);
+            this.textBox1.Location = new System.Drawing.Point(428, 34);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(384, 392);
+            this.textBox1.Size = new System.Drawing.Size(384, 364);
             this.textBox1.TabIndex = 9;
             // 
             // SelectedButton
@@ -154,10 +155,22 @@
             this.ComplectButton.UseVisualStyleBackColor = true;
             this.ComplectButton.Click += new System.EventHandler(this.ComplectButton_Click);
             // 
+            // addOpisButton
+            // 
+            this.addOpisButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addOpisButton.Location = new System.Drawing.Point(654, 404);
+            this.addOpisButton.Name = "addOpisButton";
+            this.addOpisButton.Size = new System.Drawing.Size(158, 25);
+            this.addOpisButton.TabIndex = 12;
+            this.addOpisButton.Text = "Добавить описание";
+            this.addOpisButton.UseVisualStyleBackColor = true;
+            this.addOpisButton.Click += new System.EventHandler(this.addOpisButton_Click);
+            // 
             // PersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.addOpisButton);
             this.Controls.Add(this.ComplectButton);
             this.Controls.Add(this.SelectedButton);
             this.Controls.Add(this.textBox1);
@@ -194,5 +207,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button SelectedButton;
         private System.Windows.Forms.Button ComplectButton;
+        private System.Windows.Forms.Button addOpisButton;
     }
 }

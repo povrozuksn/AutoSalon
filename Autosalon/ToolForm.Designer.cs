@@ -34,6 +34,7 @@
             this.ZakazButton = new System.Windows.Forms.Button();
             this.priceLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.addOpisButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,12 +62,13 @@
             this.textBox1.Location = new System.Drawing.Point(420, 87);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(373, 354);
             this.textBox1.TabIndex = 2;
             // 
             // ZakazButton
             // 
-            this.ZakazButton.Location = new System.Drawing.Point(585, 447);
+            this.ZakazButton.Location = new System.Drawing.Point(585, 490);
             this.ZakazButton.Name = "ZakazButton";
             this.ZakazButton.Size = new System.Drawing.Size(208, 41);
             this.ZakazButton.TabIndex = 3;
@@ -92,10 +94,22 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Цена:";
             // 
+            // addOpisButton
+            // 
+            this.addOpisButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addOpisButton.Location = new System.Drawing.Point(421, 447);
+            this.addOpisButton.Name = "addOpisButton";
+            this.addOpisButton.Size = new System.Drawing.Size(154, 26);
+            this.addOpisButton.TabIndex = 6;
+            this.addOpisButton.Text = "Добавить описание";
+            this.addOpisButton.UseVisualStyleBackColor = true;
+            this.addOpisButton.Click += new System.EventHandler(this.addOpisButton_Click);
+            // 
             // ToolForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.addOpisButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.priceLabel);
             this.Controls.Add(this.ZakazButton);
@@ -105,7 +119,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ToolForm";
-            this.Size = new System.Drawing.Size(819, 507);
+            this.Size = new System.Drawing.Size(819, 547);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -120,5 +134,6 @@
         private System.Windows.Forms.Button ZakazButton;
         private System.Windows.Forms.Label priceLabel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button addOpisButton;
     }
 }

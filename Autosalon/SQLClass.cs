@@ -15,6 +15,7 @@ namespace Autosalon
         "SslMode=none;Server=localhost;Database=autosalon;port=3306;Uid=root;charset=utf8";
         //Подключение к БД
         public static MySqlConnection CONN;
+
         //Функция SELECT-запроса
         public static List<string> mySelect(string cmdText)
         {
@@ -32,7 +33,7 @@ namespace Autosalon
             return list;
         }
 
-        //Функция INSERT-запроса
+        //Функция INSERT/DELETE/UPDATE-запроса
         public static void myUpdate(string cmdText)
         {
             MySqlCommand command = new MySqlCommand(cmdText, CONN);

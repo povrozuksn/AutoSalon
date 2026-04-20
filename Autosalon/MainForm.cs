@@ -47,7 +47,7 @@ namespace Autosalon
         public static List<Car> cars = new List<Car>();
         public static string nameUser = "";
         public static string user_id = "";
-        bool isAdmin = false;
+        public static bool isAdmin = false;
         public static string OldVal = "Рубли";
         public static string NewVal = "Рубли";
 

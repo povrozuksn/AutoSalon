@@ -15,11 +15,13 @@ namespace Autosalon
         string name_tool = "";
         string price_tool = "";
         string image_tool = "";
+        string id_komplect = "";
         public ToolForm(string id)
         {
             InitializeComponent();
             DesignForm.ApplyDesign(this);
             List<string> list = SQLClass.mySelect("SELECT id, name, price, image, opis FROM complect WHERE id = '" + id + "'");
+            id_komplect = list[0];
             Text = list[1];
             NameLabel.Text = list[1];
             name_tool = list[1];
@@ -33,6 +35,8 @@ namespace Autosalon
             image_tool = list[3];
             textBox1.Text = list[4];
             ZakazButton.Visible = (MainForm.nameUser != "");
+            addOpisButton.Visible = MainForm.isAdmin;
+            textBox1.ReadOnly = !MainForm.isAdmin;
         }
 
         private void ZakazButton_Click(object sender, EventArgs e)
@@ -51,6 +55,12 @@ namespace Autosalon
             {
                 SelectedForm.cars_selected.Add(tool, 1);
             }
+        }
+
+        private void addOpisButton_Click(object sender, EventArgs e)
+        {
+            SQLClass.myUpdate("UPDATE complect SET opis = '" + textBox1.Text + "' WHERE id = '" + id_komplect + "'");
+            MessageBox.Show("Сохранено");
         }
     }
 }
